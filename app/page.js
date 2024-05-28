@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import { FaChevronDown } from "react-icons/fa";
 import CanvasBackground from "@/components/CanvasBackground";
 import Education from "@/components/Education";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -24,6 +25,9 @@ export default function Home() {
       </div>
       <div>
         <Education />
+      </div>
+      <div>
+        <Skills />
       </div>
     </div>
   );

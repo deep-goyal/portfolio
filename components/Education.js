@@ -22,8 +22,10 @@ const Education = () => {
             </p>
           </div>
           <div className="flex flex-col items-end pt-1">
-            <p className="text-2xl">Expected May 2026</p>
             <p className="text-2xl">GPA: 4.0</p>
+            <p className="text-2xl" id="educationsub">
+              Expected May 2026
+            </p>
           </div>
         </div>
 
