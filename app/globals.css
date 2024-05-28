@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Veracruz Italic";
+  src: url("../public/fonts/veracruzitalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -30,4 +37,8 @@ a {
 
 body {
   font-family: "Veracruz", sans-serif;
+}
+
+#educationsub {
+  font-family: "Veracruz Italic";
 }

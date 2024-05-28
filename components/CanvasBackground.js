@@ -35,12 +35,13 @@ const CanvasBackground = () => {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.globalCompositeOperation = "lighter";
+      ctx.globalAlpha = 0.3;
 
       const isDarkMode = document.documentElement.classList.contains("dark");
       const starColor = isDarkMode ? "#000000" : "#ffffff";
       const lineColor = isDarkMode
-        ? "rgba(0, 0, 0, 0.9)"
-        : "rgba(255, 255, 255, 0.9)";
+        ? "rgba(0, 0, 0, 0.8)"
+        : "rgba(255, 255, 255, 0.8)";
 
       for (let i = 0; i < stars.length; i++) {
         const s = stars[i];
@@ -68,6 +69,8 @@ const CanvasBackground = () => {
       ctx.lineWidth = 0.5; // Line width
       ctx.strokeStyle = lineColor;
       ctx.stroke();
+
+      ctx.globalAlpha = 1.0; // Reset global alpha
     };
 
     const distance = (point1, point2) => {
