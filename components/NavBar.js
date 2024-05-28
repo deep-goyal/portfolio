@@ -18,7 +18,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 p-6 flex items-center bg-gray-400 bg-opacity-20 backdrop-blur-md text-white dark:bg-gray-200 dark:bg-opacity-50 dark:text-black">
+    <nav className="fixed top-0 left-0 right-0 p-6 flex items-center bg-gray-500 bg-opacity-20 backdrop-blur-md text-white dark:bg-gray-200 dark:bg-opacity-50 dark:text-black">
       <h1 className="px-10 text-8xl">deep.</h1>
       <div className="flex justify-end ml-auto pr-10">
         <a

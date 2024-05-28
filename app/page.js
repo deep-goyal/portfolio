@@ -1,13 +1,14 @@
 import Aboutme from "@/components/Aboutme";
 import NavBar from "../components/NavBar";
 import { FaChevronDown } from "react-icons/fa";
-import Sidebar from "@/components/Sidebar";
+import CanvasBackground from "@/components/CanvasBackground";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white dark:bg-white dark:text-black">
+      <CanvasBackground />
       <NavBar />
-      {/* <Sidebar /> */}
+
       <main className="flex flex-col items-center justify-center min-h-screen pb-0">
         <div className="flex flex-col items-center justify-center h-full">
           <h1 className="text-8xl font-bold mb-4">Hi! I'm Deep.</h1>
