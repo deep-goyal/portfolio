@@ -9,26 +9,25 @@
   font-style: normal;
 }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+a {
+  font-size: x-large;
+  padding: 10px;
+}
+
+.dark {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+:root {
+  --bg-color: #000000;
+  --text-color: #ffffff;
 }
 
 body {
   font-family: "Veracruz", sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
