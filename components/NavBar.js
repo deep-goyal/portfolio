@@ -16,10 +16,11 @@ const NavBar = () => {
       document.documentElement.classList.add("dark");
     }
   };
+
   return (
-    <nav className="flex justify-between items-center pt-10 pb-0 px-0 bg-gray-000 text-white dark:bg-white dark:text-black">
+    <nav className="fixed top-0 left-0 right-0 p-6 flex items-center bg-gray-400 bg-opacity-20 backdrop-blur-md text-white dark:bg-gray-200 dark:bg-opacity-50 dark:text-black">
       <h1 className="px-10 text-8xl">deep.</h1>
-      <div className="flex justify-end">
+      <div className="flex justify-end ml-auto pr-10">
         <a
           href="mailto:deep.goyal@icloud.com"
           className="mr-4 flex items-center"
@@ -38,12 +39,9 @@ const NavBar = () => {
           target="_blank"
           className="mr-4 flex items-center"
         >
-          resume {<MdArrowOutward />}
+          resume <MdArrowOutward />
         </a>
-        <button
-          onClick={toggleDarkMode}
-          className="focus:outline-none px-4 pr-20"
-        >
+        <button onClick={toggleDarkMode} className="focus:outline-none px-4">
           {darkMode ? <FiMoon size={25} /> : <GoSun size={25} />}
         </button>
       </div>
