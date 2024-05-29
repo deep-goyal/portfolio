@@ -5,6 +5,7 @@ import CanvasBackground from "@/components/CanvasBackground";
 import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -32,6 +33,9 @@ export default function Home() {
       </div>
       <div>
         <Experience />
+      </div>
+      <div>
+        <Projects />
       </div>
     </div>
   );
