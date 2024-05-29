@@ -4,7 +4,7 @@ import { FiArrowDownRight } from "react-icons/fi";
 const Aboutme = () => {
   return (
     <section
-      id="about-me"
+      id="aboutme"
       className="min-h-screen flex flex-col justify-center items-center p-20 bg-black text-white dark:bg-white dark:text-black"
     >
       <h2 className="text-7xl mb-20 flex items-center justify-center">
