@@ -1,12 +1,12 @@
-import Aboutme from "@/components/Aboutme";
-import NavBar from "@/components/NavBar";
-import { FaChevronDown } from "react-icons/fa";
-import CanvasBackground from "@/components/CanvasBackground";
-import Education from "@/components/Education";
-import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Projects from "@/components/Projects";
-import Toolbar from "@/components/Toolbar";
+import Aboutme from "@/app/components/Aboutme";
+import NavBar from "@/app/components/NavBar";
+
+import CanvasBackground from "@/app/components/CanvasBackground";
+import Education from "@/app/components/Education";
+import Skills from "@/app/components/Skills";
+import Experience from "@/app/components/Experience";
+import Projects from "@/app/components/Projects";
+import Toolbar from "@/app/components/Toolbar";
 
 export default function Home() {
   return (

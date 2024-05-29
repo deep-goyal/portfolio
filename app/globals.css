@@ -68,3 +68,7 @@ body {
 .group:not(:hover) .hover-diagonal {
   animation: move-back-diagonally 0.3s forwards;
 }
+
+.links {
+  z-index: 10;
+}

@@ -45,7 +45,7 @@ const NavBar = () => {
         </a>
         <button
           onClick={toggleDarkMode}
-          className="focus:outline-none px-4 cursor-default"
+          className="focus:outline-none px-4 cursor-default hover:scale-110 transition-transform duration-200"
         >
           {darkMode ? <FiMoon size={25} /> : <GoSun size={25} />}
         </button>
