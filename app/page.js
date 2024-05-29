@@ -4,6 +4,7 @@ import { FaChevronDown } from "react-icons/fa";
 import CanvasBackground from "@/components/CanvasBackground";
 import Education from "@/components/Education";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center min-h-screen pb-0">
         <div className="flex flex-col items-center justify-center h-full">
           <h1 className="text-8xl font-bold mb-4">Hi! I'm Deep.</h1>
-          <h2 className="text-8xl mb-20">I'm a software engineer.</h2>
+          <h2 className="text-8xl mb-20">I build cool stuff.</h2>
         </div>
         <div className="absolute bottom-0 w-full flex justify-center pb-10 ">
           <FaChevronDown />
@@ -28,6 +29,9 @@ export default function Home() {
       </div>
       <div>
         <Skills />
+      </div>
+      <div>
+        <Experience />
       </div>
     </div>
   );
