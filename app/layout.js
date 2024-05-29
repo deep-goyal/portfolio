@@ -1,7 +1,4 @@
-import CanvasBackground from "@/components/CanvasBackground";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
-import Toolbar from "@/components/Toolbar";
 
 export const metadata = {
   title: "Deep Goyal",
@@ -11,11 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <NavBar />
-        <CanvasBackground />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
