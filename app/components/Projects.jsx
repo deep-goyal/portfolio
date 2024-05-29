@@ -119,7 +119,7 @@ const Projects = () => {
             </div>
           </div>
         </Link>
-        <Link href="/projects/openspotnotifier" passHref>
+        <Link href="/projects/open-spot-notifier" passHref>
           <div className="bg-gray-800 p-4 rounded-lg shadow-lg flex justify-between items-center dark:bg-gray-200 cursor-pointer hover:scale-105 transition-transform duration-500">
             <div className="flex items-center space-x-2">
               <h3 className="text-3xl text-white dark:text-black">

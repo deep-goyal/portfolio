@@ -17,7 +17,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center min-h-screen pb-0">
         <div className="flex flex-col items-center justify-center h-full">
           <h1 className="text-8xl font-bold mb-4">Hi! I'm Deep.</h1>
-          <h2 className="text-8xl mb-20">I build cool stuff.</h2>
+          <h2 className="text-8xl mb-20">I build badass stuff.</h2>
         </div>
       </main>
       <div id="aboutme">
