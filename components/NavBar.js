@@ -20,28 +20,33 @@ const NavBar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 p-6 flex items-center bg-gray-500 bg-opacity-20 backdrop-blur-md text-white dark:bg-gray-200 dark:bg-opacity-50 dark:text-black">
       <h1 className="px-10 text-8xl">deep.</h1>
-      <div className="flex justify-end ml-auto pr-10">
+      <div className="flex justify-end ml-auto pr-10 space-x-4">
         <a
           href="mailto:deep.goyal@icloud.com"
-          className="mr-4 flex items-center"
+          className="group flex items-center cursor-default"
         >
-          email <MdArrowOutward />
+          email <MdArrowOutward className="hover-diagonal ml-1" />
         </a>
         <a
           href="https://github.com/deep-goyal"
           target="_blank"
-          className="mr-4 flex items-center"
+          rel="noopener noreferrer"
+          className="group flex items-center cursor-default"
         >
-          github <MdArrowOutward />
+          github <MdArrowOutward className="hover-diagonal ml-1" />
         </a>
         <a
           href="/resume.pdf"
           target="_blank"
-          className="mr-4 flex items-center"
+          rel="noopener noreferrer"
+          className="group flex items-center cursor-default"
         >
-          resume <MdArrowOutward />
+          resume <MdArrowOutward className="hover-diagonal ml-1" />
         </a>
-        <button onClick={toggleDarkMode} className="focus:outline-none px-4">
+        <button
+          onClick={toggleDarkMode}
+          className="focus:outline-none px-4 cursor-default"
+        >
           {darkMode ? <FiMoon size={25} /> : <GoSun size={25} />}
         </button>
       </div>

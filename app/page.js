@@ -19,9 +19,6 @@ export default function Home() {
           <h1 className="text-8xl font-bold mb-4">Hi! I'm Deep.</h1>
           <h2 className="text-8xl mb-20">I build cool stuff.</h2>
         </div>
-        <div className="absolute bottom-0 w-full flex justify-center pb-10">
-          <FaChevronDown />
-        </div>
       </main>
       <div id="aboutme">
         <Aboutme />
