@@ -36,7 +36,7 @@ const NavBar = () => {
           github <MdArrowOutward className="hover-diagonal ml-1" />
         </a>
         <a
-          href="https://drive.google.com/file/d/1_DWO6U_l2MitrPu7d8WcpGQe0YK0FU7q/view?usp=share_link"
+          href="https://drive.google.com/file/d/1KNGI64Odg3BxsXez4RAVRGIDoJdVW03l/view?usp=share_link"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center cursor-default"
