@@ -19,7 +19,7 @@ const CanvasBackground = () => {
 
     const stars = [];
     const FPS = 60;
-    const numberOfStars = 300; // Number of stars
+    const numberOfStars = 115; // Number of stars
     const mouse = { x: 0, y: 0 };
 
     for (let i = 0; i < numberOfStars; i++) {
