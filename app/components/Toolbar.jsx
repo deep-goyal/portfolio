@@ -11,7 +11,7 @@ const Toolbar = () => {
   };
 
   return (
-    <div className="toolbar fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-900 bg-opacity-80 backdrop-blur-md px-5 py-5 rounded-lg shadow-lg">
+    <div className="toolbar fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-800 bg-opacity-80 backdrop-blur-md px-5 py-5 rounded-full shadow-lg">
       <button
         className="mx-3 text-white text-2xl hover:underline"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
