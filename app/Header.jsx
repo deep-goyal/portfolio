@@ -6,6 +6,7 @@ function useJumbledText(text, interval) {
   const [displayedText, setDisplayedText] = useState(text);
 
   useEffect(() => {
+    //set of characters to jumble through
     const chars =
       "abcdefghijklmnopqrstuvwxyźщертыуиопасдфгхйкл;зхцвбнмぬふあうえおやゆよわほへたていすかんなにらぜむちとしはきくまのりれけつさそひこみもねるめ";
     let iterations = 0;
