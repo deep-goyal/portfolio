@@ -2,73 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Veracruz";
-  src: url("../public/fonts/veracruzlight.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Veracruz Italic";
-  src: url("../public/fonts/veracruzitalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  font-size: x-large;
-  padding: 10px;
-}
-
-.dark {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-}
-
-:root {
-  --bg-color: #000000;
-  --text-color: #ffffff;
-}
-
 body {
-  font-family: "Veracruz", sans-serif;
-}
-
-#educationsub {
-  font-family: "Veracruz Italic";
-}
-
-@keyframes move-diagonally {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(5px, -5px);
-  }
-}
-
-@keyframes move-back-diagonally {
-  0% {
-    transform: translate(5px, -5px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.group:hover .hover-diagonal {
-  animation: move-diagonally 0.3s forwards;
-}
-
-.group:not(:hover) .hover-diagonal {
-  animation: move-back-diagonally 0.3s forwards;
-}
-
-.links {
-  z-index: 10;
+  font-family: "Monaco", monospace;
+  background-color: #000000;
+  color: white;
 }
