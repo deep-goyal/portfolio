@@ -4,7 +4,7 @@ import "../../styles/tacard.css";
 const TACard = () => {
   return (
     <div className="taCard">
-      <p className="taText">outstanding ta of the year</p>
+      <p className="taText">Outstanding TA of the Year</p>
     </div>
   );
 };

@@ -1,5 +1,6 @@
-.gifImage {
-  width: 412px;
-  height: 500px;
+.gifCard {
+  max-width: 100vh;
+  max-height: 100vh;
+  aspect-ratio: 1.24/1;
   object-fit: cover;
 }

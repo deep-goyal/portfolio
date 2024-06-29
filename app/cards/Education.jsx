@@ -13,6 +13,7 @@ const Education = () => {
           width={200}
           height={200}
           layout="fixed"
+          objectFit="cover"
         />
       </div>
     </div>

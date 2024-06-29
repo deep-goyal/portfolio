@@ -1,6 +1,7 @@
 .numberCard {
-  width: 335px;
-  height: 117px;
+  max-width: 100vh;
+  max-height: 100vh;
+  aspect-ratio: 4.88 /1;
   background-color: #121117;
   display: flex;
   justify-content: center;

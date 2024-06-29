@@ -1,6 +1,7 @@
 .education-card {
-  width: 335px;
-  height: 470px;
+  max-width: 100vh;
+  max-height: 100vh;
+  aspect-ratio: 1.22/1;
   background-color: #121117;
   display: flex;
   justify-content: center;
@@ -9,6 +10,6 @@
 }
 
 .seal-container {
-  width: 200px;
-  height: 200px;
+  max-width: 100vh;
+  max-height: 100vh;
 }

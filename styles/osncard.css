@@ -1,6 +1,7 @@
 .openSpotNotifierCard {
-  width: 374px;
-  height: 370px;
+  max-width: 100vh;
+  max-height: 100vh;
+  aspect-ratio: 2.31/1;
   background-color: #121117;
   display: flex;
   justify-content: center;

@@ -1,6 +1,7 @@
 .githubCard {
-  width: 427px;
-  height: 212px;
+  max-width: 50vh;
+  max-height: 50vh;
+  aspect-ratio: 4.78/1;
   background-color: #121117;
   display: flex;
   justify-content: center;

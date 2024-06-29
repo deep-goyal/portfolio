@@ -1,6 +1,7 @@
 .typographyCard {
-  width: 809px;
-  height: 140px;
+  max-width: 100vh;
+  max-height: 100vh;
+  aspect-ratio: 7.12/1;
   background-color: #121117;
   display: flex;
   justify-content: center;
@@ -9,7 +10,7 @@
 }
 
 .typographyText {
-  font-size: 48px;
+  font-size: 36px;
   background: linear-gradient(to right, #2a26d7, #d5d3d8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

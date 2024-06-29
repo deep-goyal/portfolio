@@ -11,39 +11,44 @@ import OSNCard from "./cards/OSNCard";
 import GifCard from "./cards/GifCard";
 import BlogsCard from "./cards/BlogsCard";
 import TACard from "./cards/TACard";
+import "../styles/grid.css";
 
 const Grid = () => {
   return (
-    <div className="flex flex-col gap-4 pt-20 ml-4">
-      <div className="flex flex-wrap gap-4 justify-center items-start">
-        <div className="flex flex-col gap-4">
+    <div className="container">
+      <div className="row">
+        <div className="column">
           <Education />
           <Number />
         </div>
-        <div className="flex flex-col gap-4">
+
+        <div className="column">
           <GPACard />
           <InternCard />
+          <GitHubCard />
         </div>
-        <FECard />
+
+        <div className="column">
+          <FECard />
+        </div>
+
+        <div className="column">
+          <GifCard />
+        </div>
       </div>
 
-      <div className="flex flex-wrap gap-4">
-        <div className="flex flex-col gap-4">
+      <div className="row">
+        <div className="column">
           <Typography />
-          <div className="flex flex-wrap gap-4">
-            <div className="flex flex-col gap-4">
-              <SushiScroll />
-              <GitHubCard />
-            </div>
-            <OSNCard />
-          </div>
+          <SushiScroll />
+          <BlogsCard />
         </div>
-        <GifCard />
-      </div>
-
-      <div className="flex flex-wrap gap-4">
-        <BlogsCard />
-        <TACard />
+        <div className="column">
+          <OSNCard />
+        </div>
+        <div className="column">
+          <TACard />
+        </div>
       </div>
     </div>
   );

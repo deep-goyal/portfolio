@@ -4,7 +4,7 @@ import "../../styles/osncard.css";
 const OSNCard = () => {
   return (
     <div className="openSpotNotifierCard">
-      <p className="openSpotNotifierText">open spot notifier</p>
+      <p className="openSpotNotifierText">Open Spot Notifier</p>
     </div>
   );
 };
