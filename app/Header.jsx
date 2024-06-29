@@ -65,8 +65,8 @@ export default function Header() {
   return (
     <div className="flex flex-col items-start main-container">
       <div className="flex flex-col gap-10 px-2xl header-container">
-        <p className="text-4xl mx-20 mt-40">{jumbledText}</p>
-        <div className="flex ml-20">
+        <p className="text-4xl ml-40 mt-40">{jumbledText}</p>
+        <div className="flex ml-40">
           <p className="text-xl max-w-lg">
             i’m a junior at arizona state. i love building software and teaching
             cs, and i hold a distinct passion for building memorable experiences

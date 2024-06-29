@@ -1,0 +1,16 @@
+.typographyCard {
+  width: 809px;
+  height: 140px;
+  background-color: #121117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.typographyText {
+  font-size: 48px;
+  background: linear-gradient(to right, #2a26d7, #d5d3d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

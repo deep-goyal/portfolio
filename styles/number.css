@@ -1,0 +1,16 @@
+.numberCard {
+  width: 335px;
+  height: 117px;
+  background-color: #121117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.numberText {
+  font-size: 48px;
+  background: linear-gradient(to right, #ffffff, #999999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

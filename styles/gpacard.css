@@ -1,0 +1,16 @@
+.gpaCard {
+  width: 467px;
+  height: 129px;
+  background: linear-gradient(to right, #1c1c1d, #7c7c83);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gpaText {
+  font-size: 48px;
+  background: linear-gradient(to right, #ffffff, #999999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,15 @@
+.sushiStrollCard {
+  width: 427px;
+  height: 149px;
+  background: linear-gradient(to right, #5c7f4c, #a7e589);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sushiStrollText {
+  font-size: 36px;
+  font-family: "Nuku Nuku", sans-serif;
+  color: #ffffff;
+}

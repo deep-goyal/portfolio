@@ -1,0 +1,14 @@
+.sweInternCard {
+  width: 467px;
+  height: 458px;
+  background: linear-gradient(to right, #f6cfbe, #6c9de2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sweInternText {
+  font-size: 36px;
+  color: #ffffff;
+}

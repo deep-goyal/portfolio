@@ -1,0 +1,15 @@
+.openSpotNotifierCard {
+  width: 374px;
+  height: 370px;
+  background-color: #121117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.openSpotNotifierText {
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+}

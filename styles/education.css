@@ -1,0 +1,14 @@
+.education-card {
+  width: 335px;
+  height: 470px;
+  background-color: #121117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.seal-container {
+  width: 200px;
+  height: 200px;
+}

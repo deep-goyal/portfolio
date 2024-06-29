@@ -1,0 +1,16 @@
+.frontendEngineerCard {
+  width: 412px;
+  height: 598px;
+  background-color: #121117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.frontendEngineerText {
+  font-size: 36px;
+  font-family: "American Typewriter", serif;
+  color: #ffffff;
+  text-align: center;
+}

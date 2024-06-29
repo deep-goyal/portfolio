@@ -1,0 +1,14 @@
+.taCard {
+  width: 795px;
+  height: 128px;
+  background-color: #121117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.taText {
+  font-size: 36px;
+  color: #ffffff;
+}
