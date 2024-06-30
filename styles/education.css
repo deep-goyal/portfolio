@@ -1,15 +1,24 @@
 .education-card {
-  max-width: 100vh;
-  max-height: 100vh;
-  aspect-ratio: 1.22/1;
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  aspect-ratio: 3/2;
+  flex: 1;
 }
 
 .seal-container {
-  max-width: 100vh;
-  max-height: 100vh;
+  max-width: 10em;
+  animation: spin infinite 5s linear;
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
 }

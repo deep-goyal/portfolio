@@ -1,12 +1,11 @@
 .blogsCard {
-  max-width: 100vh;
-  max-height: 100vh;
-  aspect-ratio: 7.12/1;
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  aspect-ratio: 2/1;
+  flex: 1;
 }
 
 .blogsText {

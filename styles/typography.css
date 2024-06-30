@@ -1,12 +1,11 @@
 .typographyCard {
-  max-width: 100vh;
-  max-height: 100vh;
-  aspect-ratio: 7.12/1;
+  aspect-ratio: 3/1;
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  flex: 1;
 }
 
 .typographyText {

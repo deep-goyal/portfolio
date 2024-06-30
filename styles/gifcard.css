@@ -1,6 +1,5 @@
 .gifCard {
-  max-width: 100vh;
-  max-height: 100vh;
-  aspect-ratio: 1.24/1;
   object-fit: cover;
+  flex: 1;
+  display: flex;
 }

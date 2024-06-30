@@ -7,7 +7,7 @@ const GitHubCard = () => {
   return (
     <div className="githubCard">
       <div className="logoContainer">
-        <FontAwesomeIcon icon={faGithub} size="5x" />
+        <FontAwesomeIcon icon={faGithub} size="2x" />
       </div>
     </div>
   );

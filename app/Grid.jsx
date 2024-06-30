@@ -30,6 +30,7 @@ const Grid = () => {
 
         <div className="column">
           <FECard />
+          <BlogsCard />
         </div>
 
         <div className="column">
@@ -41,7 +42,6 @@ const Grid = () => {
         <div className="column">
           <Typography />
           <SushiScroll />
-          <BlogsCard />
         </div>
         <div className="column">
           <OSNCard />

@@ -1,12 +1,10 @@
 .githubCard {
-  max-width: 50vh;
-  max-height: 50vh;
-  aspect-ratio: 4.78/1;
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: 10px;
 }
 
 .logoContainer {
@@ -14,4 +12,15 @@
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  animation: spin infinite 5s linear;
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
 }

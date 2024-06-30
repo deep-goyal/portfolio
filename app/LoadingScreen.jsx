@@ -1,13 +1,14 @@
 import React from "react";
-import "./LoadingScreen.css";
+import "../styles/LoadingScreen.css";
 
 const LoadingScreen = ({ fadeOut }) => {
   return (
-    <div className={`mainCss ${fadeOut ? "fade-out" : ""}`}>
-      <div className="dotsCss">
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
+    <div className={`stack ${fadeOut ? "fade-out" : ""}`}>
+      <div className="blobs">
+        <span className="blob"></span>
+        <span className="blob"></span>
+        <span className="blob"></span>
+        <span className="blob"></span>
       </div>
     </div>
   );

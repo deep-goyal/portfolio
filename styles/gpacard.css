@@ -1,12 +1,10 @@
 .gpaCard {
-  max-width: 50vh;
-  max-height: 50vh;
-  aspect-ratio: 4.4/1;
   background: linear-gradient(to right, #1c1c1d, #7c7c83);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  aspect-ratio: 5/1;
 }
 
 .gpaText {

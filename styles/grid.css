@@ -1,18 +1,27 @@
 .container {
   max-width: 100vw;
-  padding-top: 2em;
-  margin: 0 auto;
+  padding-top: 10em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .row {
   display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .column {
-  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 1;
+  gap: 3px;
+  margin: 0;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 768px) {

@@ -1,15 +1,15 @@
 .taCard {
-  max-width: 100vh;
-  max-height: 100vh;
-  aspect-ratio: 1.71/1;
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  aspect-ratio: 2/1;
 }
 
 .taText {
-  font-size: 36px;
+  font-size: x-large;
   color: #ffffff;
+  padding: 20px;
+  text-align: center;
 }
