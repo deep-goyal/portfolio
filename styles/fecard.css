@@ -10,6 +10,9 @@
 .frontendEngineerText {
   font-size: 36px;
   font-family: "American Typewriter", serif;
-  color: #ffffff;
+  background: linear-gradient(to bottom right, #1c5e71, #59a9da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: none;
   text-align: center;
 }

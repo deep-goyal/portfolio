@@ -1,5 +1,5 @@
 .sweInternCard {
-  background: linear-gradient(to right, #f6cfbe, #6c9de2);
+  background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,5 +11,8 @@
 
 .sweInternText {
   font-size: 36px;
-  color: #ffffff;
+  background: linear-gradient(to bottom, #a78a5b, #667cfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: none;
 }

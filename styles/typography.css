@@ -13,4 +13,5 @@
   background: linear-gradient(to right, #2a26d7, #d5d3d8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: none;
 }

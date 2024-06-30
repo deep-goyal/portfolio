@@ -4,7 +4,7 @@ import "../../styles/number.css";
 const Number = () => {
   return (
     <div className="numberCard">
-      <p className="numberText">20</p>
+      <p className="numberText">50000</p>
     </div>
   );
 };

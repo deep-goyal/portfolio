@@ -4,7 +4,7 @@ import "../../styles/blogscard.css";
 const BlogsCard = () => {
   return (
     <div className="blogsCard">
-      <p className="blogsText">blogs</p>
+      <p className="blogsText">Blogs</p>
     </div>
   );
 };

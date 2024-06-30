@@ -8,8 +8,11 @@
 }
 
 .taText {
-  font-size: x-large;
-  color: #ffffff;
+  font-size: 36px;
+  background: linear-gradient(to bottom right, #ad5f09, #d60bcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: none;
   padding: 20px;
   text-align: center;
 }

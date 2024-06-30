@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import Grid from "./Grid";
 import Header from "./Header";
 import LoadingScreen from "./LoadingScreen";
@@ -9,6 +8,7 @@ import LoadingScreen from "./LoadingScreen";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,6 +21,15 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setCursorPosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   if (isLoading) {
     return <LoadingScreen fadeOut={fadeOut} />;
   }
@@ -29,6 +38,10 @@ export default function Home() {
     <div className="flex flex-col items-start main-container">
       <Header />
       <Grid />
+      <div
+        className="cursor"
+        style={{ left: `${cursorPosition.x}px`, top: `${cursorPosition.y}px` }}
+      />
     </div>
   );
 }

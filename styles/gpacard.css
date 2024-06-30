@@ -1,5 +1,5 @@
 .gpaCard {
-  background: linear-gradient(to right, #1c1c1d, #7c7c83);
+  background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,8 @@
 
 .gpaText {
   font-size: 48px;
-  background: linear-gradient(to right, #ffffff, #999999);
+  background: linear-gradient(to right, #694e7e, #0f3a71);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: none;
 }

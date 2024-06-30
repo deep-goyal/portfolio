@@ -1,5 +1,5 @@
 .sushiStrollCard {
-  background: linear-gradient(to right, #5c7f4c, #a7e589);
+  background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,10 @@
 .sushiStrollText {
   font-size: 36px;
   font-family: "Nuku Nuku", sans-serif;
-  color: #ffffff;
+  background: linear-gradient(to bottom right, #39b886, #342dc3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: none;
 }
 
 @font-face {

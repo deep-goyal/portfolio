@@ -9,7 +9,8 @@
 
 .numberText {
   font-size: 48px;
-  background: linear-gradient(to right, #ffffff, #999999);
+  background: linear-gradient(to right, #a62c3d, #7924f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: none;
 }

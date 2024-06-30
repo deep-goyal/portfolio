@@ -10,5 +10,8 @@
 
 .blogsText {
   font-size: 36px;
-  color: #ffffff;
+  background: linear-gradient(to bottom right, #ffa8a8, #fcff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: none;
 }

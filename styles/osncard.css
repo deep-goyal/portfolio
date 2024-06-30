@@ -10,6 +10,9 @@
 
 .openSpotNotifierText {
   font-size: 36px;
-  color: #ffffff;
+  background: linear-gradient(to bottom right, #65aca5, #f0f1fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: none;
   text-align: center;
 }
