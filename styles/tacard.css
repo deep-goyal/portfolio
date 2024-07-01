@@ -3,8 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
-  overflow-y: auto;
+  overflow: hidden;
+  /* overflow-y: auto; */
   aspect-ratio: 2/1;
 }
 
@@ -16,4 +16,10 @@
   background-clip: none;
   padding: 20px;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .taText {
+    font-size: 28px;
+  }
 }

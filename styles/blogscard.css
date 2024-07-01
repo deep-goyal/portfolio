@@ -3,9 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
-  overflow-y: auto;
-  overflow-y: auto;
+  overflow: hidden;
   aspect-ratio: 2/1;
   flex: 1;
 }
@@ -16,4 +14,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: none;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .blogsText {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogsText {
+    font-size: 28px;
+  }
 }

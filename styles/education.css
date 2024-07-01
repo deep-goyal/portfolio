@@ -3,8 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
-  overflow-y: auto;
+  overflow: hidden;
+  /* overflow-y: auto; */
   aspect-ratio: 3/2;
   flex: 1;
 }
@@ -21,5 +21,11 @@
 
   to {
     rotate: 360deg;
+  }
+}
+
+@media (max-width: 1024px) {
+  .seal-container {
+    max-width: 3em;
   }
 }

@@ -3,9 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
   aspect-ratio: 7/1;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .sushiStrollText {
@@ -20,4 +20,10 @@
 @font-face {
   font-family: "Nuku Nuku";
   src: url(../public/nuku.ttf);
+}
+
+@media (max-width: 1024px) {
+  .sushiStrollText {
+    font-size: 28px;
+  }
 }

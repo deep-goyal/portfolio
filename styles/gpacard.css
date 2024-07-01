@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
   aspect-ratio: 5/1;
 }
 
@@ -13,4 +13,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: none;
+}
+
+@media (max-width: 1024px) {
+  .gpaText {
+    font-size: 28px;
+  }
 }

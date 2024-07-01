@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
-  overflow-y: auto;
+  overflow: hidden;
+  /* overflow-y: auto; */
   flex: 1;
 }
 
@@ -15,4 +15,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: none;
+}
+
+@media (max-width: 1024px) {
+  .typographyText {
+    font-size: 28px;
+  }
 }
