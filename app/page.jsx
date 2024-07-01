@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Grid from "./Grid";
 import Header from "./Header";
 import LoadingScreen from "./LoadingScreen";
+import LineAnimation from "./LineAnimation"; // Import the LineAnimation component
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,13 +36,22 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-start main-container">
-      <Header />
-      <Grid />
-      <div
-        className="cursor"
-        style={{ left: `${cursorPosition.x}px`, top: `${cursorPosition.y}px` }}
-      />
+    <div className="page-container">
+      <div className="flex flex-col items-start flex-1">
+        <div className="relative w-full h-full">
+          <LineAnimation />
+          <Header />
+        </div>
+
+        <Grid />
+        <div
+          className="cursor"
+          style={{
+            left: `${cursorPosition.x}px`,
+            top: `${cursorPosition.y}px`,
+          }}
+        />
+      </div>
     </div>
   );
 }

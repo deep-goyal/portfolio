@@ -6,6 +6,7 @@ body {
   font-family: "Monaco", monospace;
   background-color: #000000;
   color: white;
+  height: 100vh;
 }
 
 body {
@@ -21,4 +22,13 @@ body {
   pointer-events: none;
   mix-blend-mode: difference;
   z-index: 9999;
+}
+
+* {
+  overflow-y: auto;
+}
+
+.page-container {
+  overflow-y: auto;
+  height: 100vh;
 }

@@ -6,9 +6,8 @@ function useJumbledText(text, interval) {
   const [displayedText, setDisplayedText] = useState(text);
 
   useEffect(() => {
-    //set of characters to jumble through
     const chars =
-      "abcdefghijklmnopqrstuvwxyźщертыуиопасдфгхйкл;зхцвбнмぬふあうえおやゆよわほへたていすかんなにらぜむちとしはきくまのりれけつさそひこみもねるめ";
+      "abcdefghijklmnopqrstuvwxyźщертыуиопасдфгхйкл;зхцвбнмぬふあうえおやゆよわほへたていすかんなにらぜむちとしはきくまのりれけつさそひこみもねるめ";
     let iterations = 0;
     const jumbleInterval = setInterval(() => {
       if (iterations >= 20) {
@@ -63,8 +62,8 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="flex flex-col items-start main-container">
-      <div className="flex flex-col gap-10 px-2xl header-container">
+    <div className="flex flex-col items-start main-container header-container mt-40">
+      <div className="flex flex-col gap-10 px-2xl">
         <p className="text-4xl ml-40 mt-40">{jumbledText}</p>
         <div className="flex ml-40">
           <p className="text-xl max-w-lg">

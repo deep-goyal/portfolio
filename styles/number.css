@@ -3,13 +3,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-y: auto;
   aspect-ratio: 3/1;
 }
 
 .numberText {
   font-size: 48px;
-  background: linear-gradient(to right, #a62c3d, #7924f0);
+  background: linear-gradient(to bottom right, #a62c3d, #7924f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: none;
