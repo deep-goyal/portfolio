@@ -8,7 +8,6 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* overflow-y: auto; */
   aspect-ratio: 3/2;
   margin: 0;
   flex: 1;
@@ -19,143 +18,21 @@ body {
   font-size: 36px;
   text-align: center;
   color: rgba(255, 255, 255, 0.1);
-  background: linear-gradient(to bottom, #a78a5b, #667cfe);
-  -webkit-background-size: 50px 100%;
-  -moz-background-size: 50px 100%;
-  background-size: 50px 100%;
+  background: linear-gradient(to right, #a78a5b 20%, #667cfe 40%, #a78a5b 60%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   background-clip: text;
-  -webkit-animation-name: shimmer, shadow;
-  -moz-animation-name: shimmer, shadow;
-  animation-name: shimmer, shadow;
-  -webkit-animation-duration: 8s, 8s;
-  -moz-animation-duration: 8s, 8s;
-  animation-duration: 8s, 8s;
-  -webkit-animation-iteration-count: infinite, infinite;
-  -moz-animation-iteration-count: infinite, infinite;
-  animation-iteration-count: infinite, infinite;
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: textShine 5s ease-in-out infinite alternate;
 }
 
-@-moz-keyframes shimmer {
+@keyframes textShine {
   0% {
-    background-position: top left;
-  }
-  25% {
-    background-position: top right;
-  }
-  50% {
-    background-position: bottom right;
-  }
-  75% {
-    background-position: bottom left;
+    background-position: 0% 50%;
   }
   100% {
-    background-position: top left;
-  }
-}
-
-@-webkit-keyframes shimmer {
-  0% {
-    background-position: top left;
-  }
-  25% {
-    background-position: top right;
-  }
-  50% {
-    background-position: bottom right;
-  }
-  75% {
-    background-position: bottom left;
-  }
-  100% {
-    background-position: top left;
-  }
-}
-
-@-o-keyframes shimmer {
-  0% {
-    background-position: top left;
-  }
-  25% {
-    background-position: top right;
-  }
-  50% {
-    background-position: bottom right;
-  }
-  75% {
-    background-position: bottom left;
-  }
-  100% {
-    background-position: top left;
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: top left;
-  }
-  25% {
-    background-position: top right;
-  }
-  50% {
-    background-position: bottom right;
-  }
-  75% {
-    background-position: bottom left;
-  }
-  100% {
-    background-position: top left;
-  }
-}
-
-@-moz-keyframes shadow {
-  0% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
-  }
-  100% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-}
-
-@-webkit-keyframes shadow {
-  0% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
-  }
-  100% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-}
-
-@-o-keyframes shadow {
-  0% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
-  }
-  100% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-}
-
-@keyframes shadow {
-  0% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
-  }
-  100% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-position: 100% 50%;
   }
 }
 

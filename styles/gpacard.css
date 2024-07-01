@@ -9,10 +9,22 @@
 
 .gpaText {
   font-size: 48px;
-  background: linear-gradient(to right, #694e7e, #0f3a71);
+  background: linear-gradient(to right, #694e7e 20%, #0f3a71 40%, #694e7e 60%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: none;
+  background-clip: text;
+  padding: 20px;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (max-width: 1024px) {

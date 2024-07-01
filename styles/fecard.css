@@ -4,18 +4,28 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* overflow-y: auto; */
   aspect-ratio: 2/1;
 }
 
 .frontendEngineerText {
   font-size: 36px;
-  font-family: "American Typewriter", serif;
-  background: linear-gradient(to bottom right, #1c5e71, #59a9da);
+  background: linear-gradient(to right, #1c5e71 20%, #59a9da 40%, #1c5e71 60%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: none;
+  background-clip: text;
   text-align: center;
+  padding: 20px;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (max-width: 1024px) {

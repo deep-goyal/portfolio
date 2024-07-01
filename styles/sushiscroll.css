@@ -1,20 +1,31 @@
-.sushiStrollCard {
+.sushiScrollCard {
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   aspect-ratio: 7/1;
-  /* overflow-y: auto; */
 }
 
-.sushiStrollText {
+.sushiScrollText {
   font-size: 36px;
   font-family: "Nuku Nuku", sans-serif;
-  background: linear-gradient(to bottom right, #39b886, #342dc3);
+  background: linear-gradient(to right, #39b886 20%, #342dc3 40%, #39b886 60%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: none;
+  text-fill-color: transparent;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @font-face {

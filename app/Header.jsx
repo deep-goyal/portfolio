@@ -38,11 +38,11 @@ function useJumbledText(text, interval) {
 
 export default function Header() {
   const translations = [
-    "hi, i'm deep!",
-    "hallo, ich bin deep!",
+    "Hi, I'm Deep!",
+    "Hallo, ich bin Deep!",
     "こんにちは、ディープです！",
-    "salut, je suis deep!",
-    "hola, soy deep!",
+    "Salut, je suis Deep!",
+    "Hola, soy Deep!",
     "привет, я дип!",
   ];
 
@@ -56,7 +56,7 @@ export default function Header() {
         const nextIndex = (currentIndex + 1) % translations.length;
         return translations[nextIndex];
       });
-    }, 8000); //time interval
+    }, 8000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -67,8 +67,8 @@ export default function Header() {
         <p className="text-4xl ml-40 mt-40">{jumbledText}</p>
         <div className="flex ml-40">
           <p className="text-xl max-w-lg">
-            i’m a junior at arizona state. i love building software and teaching
-            cs, and i hold a distinct passion for building memorable experiences
+            I'm a junior at Arizona State. I love building software and teaching
+            cs, and I hold a distinct passion for building memorable experiences
             through front-end interfaces!
           </p>
         </div>

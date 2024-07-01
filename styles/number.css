@@ -4,16 +4,27 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* overflow-y: auto; */
   aspect-ratio: 3/1;
 }
 
 .numberText {
   font-size: 48px;
-  background: linear-gradient(to bottom right, #a62c3d, #7924f0);
+  background: linear-gradient(to right, #a62c3d 20%, #7924f0 40%, #a62c3d 60%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: none;
+  text-fill-color: transparent;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (max-width: 1024px) {

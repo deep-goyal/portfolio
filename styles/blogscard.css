@@ -10,10 +10,22 @@
 
 .blogsText {
   font-size: 36px;
-  background: linear-gradient(to bottom right, #ffa8a8, #fcff00);
+  background: linear-gradient(to right, #ffa8a8 20%, #fcff00 40%, #ffa8a8 60%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: none;
+  text-fill-color: transparent;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

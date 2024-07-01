@@ -31,4 +31,5 @@ body {
 .page-container {
   overflow-y: auto;
   height: 100vh;
+  width: 100vw;
 }

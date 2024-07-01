@@ -3,8 +3,8 @@ import "../../styles/sushiscroll.css";
 
 const SushiScroll = () => {
   return (
-    <div className="sushiStrollCard">
-      <p className="sushiStrollText">SUSHI SCROLL</p>
+    <div className="sushiScrollCard">
+      <p className="sushiScrollText">SUSHI SCROLL</p>
     </div>
   );
 };
