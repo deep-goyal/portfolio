@@ -1,11 +1,21 @@
 .githubCard {
+  position: relative;
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* overflow-y: auto; */
   padding: 10px;
+  border-radius: 4px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease;
 }
 
 .logoContainer {
@@ -24,4 +34,8 @@
   to {
     rotate: 360deg;
   }
+}
+
+.githubCard:hover .content {
+  filter: blur(5px);
 }

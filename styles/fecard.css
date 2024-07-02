@@ -1,10 +1,21 @@
 .frontendEngineerCard {
+  position: relative;
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   aspect-ratio: 2/1;
+  border-radius: 4px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease;
 }
 
 .frontendEngineerText {
@@ -32,4 +43,8 @@
   .frontendEngineerText {
     font-size: 28px;
   }
+}
+
+.frontendEngineerCard:hover .content {
+  filter: blur(5px);
 }

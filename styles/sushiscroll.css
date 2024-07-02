@@ -1,10 +1,21 @@
 .sushiScrollCard {
+  position: relative;
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   aspect-ratio: 7/1;
+  border-radius: 4px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease;
 }
 
 .sushiScrollText {
@@ -34,7 +45,11 @@
 }
 
 @media (max-width: 1024px) {
-  .sushiStrollText {
+  .sushiScrollText {
     font-size: 28px;
   }
+}
+
+.sushiScrollCard:hover .content {
+  filter: blur(5px);
 }

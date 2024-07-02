@@ -1,12 +1,22 @@
 .education-card {
+  position: relative;
   background-color: #121117;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* overflow-y: auto; */
   aspect-ratio: 3/2;
+  border-radius: 4px;
   flex: 1;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease;
 }
 
 .seal-container {
@@ -28,4 +38,8 @@
   .seal-container {
     max-width: 3em;
   }
+}
+
+.education-card:hover .content {
+  filter: blur(5px);
 }

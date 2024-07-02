@@ -38,11 +38,11 @@ function useJumbledText(text, interval) {
 
 export default function Header() {
   const translations = [
-    "Hi, I'm Deep!",
-    "Hallo, ich bin Deep!",
+    "hi, i'm deep!",
+    "hallo, ich bin deep!",
     "こんにちは、ディープです！",
-    "Salut, je suis Deep!",
-    "Hola, soy Deep!",
+    "salut, je suis deep!",
+    "hola, soy deep!",
     "привет, я дип!",
   ];
 
@@ -67,9 +67,9 @@ export default function Header() {
         <p className="text-4xl ml-40 mt-40">{jumbledText}</p>
         <div className="flex ml-40">
           <p className="text-xl max-w-lg">
-            I'm a junior at Arizona State. I love building software and teaching
-            cs, and I hold a distinct passion for building memorable experiences
-            through front-end interfaces!
+            i'm a junior at arizona state. i love building software and teaching
+            cs, and i hold a distinct passion for building memorable experiences
+            through front-end interfaces! i aspire to be a great web engineer!
           </p>
         </div>
       </div>

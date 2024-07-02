@@ -5,6 +5,7 @@
   align-items: center;
   overflow: hidden;
   aspect-ratio: 5/1;
+  border-radius: 4px;
 }
 
 .gpaText {

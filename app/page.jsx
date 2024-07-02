@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Grid from "./Grid";
 import Header from "./Header";
 import LoadingScreen from "./LoadingScreen";
-import LineAnimation from "./LineAnimation"; // Import the LineAnimation component
+import LineAnimation from "./LineAnimation";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +44,7 @@ export default function Home() {
         </div>
 
         <Grid />
+
         <div
           className="cursor"
           style={{
