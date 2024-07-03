@@ -51,12 +51,6 @@ body {
   overflow-y: auto;
 }
 
-.page-container {
-  overflow-y: auto;
-  height: 100vh;
-  width: 100vw;
-}
-
 ::selection {
   background-color: #0eeb0e;
   color: #000000;

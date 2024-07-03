@@ -14,7 +14,7 @@ import TACard from "./cards/TACard";
 import "../styles/grid.css";
 
 const Grid = () => {
-  const rowsRef = useRef([]);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,26 +30,20 @@ const Grid = () => {
       { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
     );
 
-    rowsRef.current.forEach((row) => {
-      if (row) {
-        observer.observe(row);
-      }
-    });
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
     return () => {
-      if (rowsRef.current) {
-        rowsRef.current.forEach((row) => {
-          if (row) {
-            observer.unobserve(row);
-          }
-        });
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
       }
     };
   }, []);
 
   return (
-    <div className="container">
-      <div className="row" ref={(el) => rowsRef.current.push(el)}>
+    <div className="container" ref={containerRef}>
+      <div className="row">
         <div className="column">
           <Education />
           <Number />
@@ -67,7 +61,7 @@ const Grid = () => {
           <GifCard />
         </div>
       </div>
-      <div className="row" ref={(el) => rowsRef.current.push(el)}>
+      <div className="row">
         <div className="column">
           <Typography />
           <SushiScroll />

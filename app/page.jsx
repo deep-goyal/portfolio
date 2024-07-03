@@ -36,7 +36,7 @@ export default function Home() {
   }
 
   return (
-    <div className="page-container">
+    <div className="h-screen w-screen overflow-y-auto">
       <div className="flex flex-col items-start flex-1">
         <div className="relative w-full h-full">
           <LineAnimation />
