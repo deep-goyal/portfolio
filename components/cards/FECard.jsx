@@ -9,7 +9,7 @@ const FECard = () => {
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="frontendEngineerText">Frontend Engineer</p>
+        <p className="frontendEngineerText">frontend engineer</p>
       </div>
     </div>
   );

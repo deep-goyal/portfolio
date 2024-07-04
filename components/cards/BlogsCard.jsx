@@ -9,7 +9,7 @@ const BlogsCard = () => {
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="blogsText">Blogs</p>
+        <p className="blogsText">blogs</p>
       </div>
     </div>
   );

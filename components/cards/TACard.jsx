@@ -9,7 +9,7 @@ const TACard = () => {
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="taText">Outstanding TA of the Year</p>
+        <p className="taText">outstanding ta of the year</p>
       </div>
     </div>
   );

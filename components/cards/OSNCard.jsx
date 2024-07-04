@@ -9,7 +9,7 @@ const OSNCard = () => {
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="openSpotNotifierText">Open Spot Notifier</p>
+        <p className="openSpotNotifierText">open spot notifier</p>
       </div>
     </div>
   );

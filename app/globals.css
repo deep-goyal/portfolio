@@ -4,6 +4,7 @@
 
 body {
   font-family: "Monaco", monospace;
+  font-weight: 500;
   background-color: #000000;
   color: white;
   height: 100vh;
