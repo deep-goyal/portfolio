@@ -1,5 +1,6 @@
 "use client";
 
+import PageNav from "@/components/PageNav";
 import React from "react";
 import { useEffect, useState } from "react";
 
@@ -17,7 +18,7 @@ const page = () => {
 
   return (
     <>
-      <div>Hello, Education.</div>
+      <PageNav />
 
       <div
         className="cursor"

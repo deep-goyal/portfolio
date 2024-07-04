@@ -9,11 +9,13 @@ import {
 
 const PageNav = () => {
   return (
-    <div className="flex max-w-screen-xl flex-wrap flex-1 justify-between items-center pt-10 pl-40 px-0 mx-0">
-      <Image src={Deep} alt="Deep" width={100} height={100} />
-      <div className="flex justify-between items-center gap-8 text-xl">
+    <div className="flex flex-wrap w-screen justify-center items-center py-20">
+      <div className="flex-grow pl-40">
+        <Image src={Deep} alt="Deep" width={100} height={100} />
+      </div>
+      <div className="flex justify-between items-center gap-8 text-xl pr-40">
         <div
-          className="flex items-center  hover:text-gray-800"
+          className="flex items-center hover:text-gray-800"
           onMouseEnter={() => document.body.classList.add("no-cursor")}
           onMouseLeave={() => document.body.classList.remove("no-cursor")}
         >
@@ -22,12 +24,12 @@ const PageNav = () => {
         </div>
 
         <RiHomeLine
-          className=" hover:text-gray-800"
+          className="hover:text-gray-800"
           onMouseEnter={() => document.body.classList.add("no-cursor")}
           onMouseLeave={() => document.body.classList.remove("no-cursor")}
         />
         <div
-          className="flex items-center  hover:text-gray-800"
+          className="flex items-center hover:text-gray-800"
           onMouseEnter={() => document.body.classList.add("no-cursor")}
           onMouseLeave={() => document.body.classList.remove("no-cursor")}
         >
