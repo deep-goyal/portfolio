@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Education from "./cards/Education";
 import Number from "./cards/Number";
-import GPACard from "./cards/GPACard";
+import StateCard from "./cards/StateCard";
 import InternCard from "./cards/InternCard";
 import FECard from "./cards/FECard";
 import Typography from "./cards/Typography";
@@ -49,7 +49,7 @@ const Grid = () => {
           <Number />
         </div>
         <div className="column">
-          <GPACard />
+          <StateCard />
           <InternCard />
           <GitHubCard />
         </div>

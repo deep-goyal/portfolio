@@ -1,4 +1,4 @@
-.gpaCard {
+.stateCard {
   background-color: #121117;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
   border-radius: 4px;
 }
 
-.gpaText {
+.stateText {
   font-size: 48px;
   background: linear-gradient(to right, #694e7e 20%, #0f3a71 40%, #694e7e 60%);
   background-size: 200% auto;
