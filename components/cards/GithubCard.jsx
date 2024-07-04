@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import "../../styles/githubcard.css";
+import "@/styles/githubcard.css";
 
 const GitHubCard = () => {
   return (

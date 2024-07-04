@@ -1,5 +1,5 @@
 import React from "react";
-import "./LineAnimation.scss"; // Import the SCSS file for styling
+import "../styles/LineAnimation.scss";
 
 export default function LineAnimation() {
   return (

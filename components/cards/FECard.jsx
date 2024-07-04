@@ -1,18 +1,18 @@
 import React from "react";
-import "../../styles/tacard.css";
+import "@/styles/fecard.css";
 
-const TACard = () => {
+const FECard = () => {
   return (
     <div
-      className="taCard"
+      className="frontendEngineerCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="taText">Outstanding TA of the Year</p>
+        <p className="frontendEngineerText">Frontend Engineer</p>
       </div>
     </div>
   );
 };
 
-export default TACard;
+export default FECard;

@@ -1,18 +1,18 @@
 import React from "react";
-import "../../styles/fecard.css";
+import "@/styles/blogscard.css";
 
-const FECard = () => {
+const BlogsCard = () => {
   return (
     <div
-      className="frontendEngineerCard"
+      className="blogsCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="frontendEngineerText">Frontend Engineer</p>
+        <p className="blogsText">Blogs</p>
       </div>
     </div>
   );
 };
 
-export default FECard;
+export default BlogsCard;

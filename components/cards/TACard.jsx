@@ -1,18 +1,18 @@
 import React from "react";
-import "../../styles/number.css";
+import "@/styles/tacard.css";
 
-const Number = () => {
+const TACard = () => {
   return (
     <div
-      className="numberCard"
+      className="taCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="numberText">50000</p>
+        <p className="taText">Outstanding TA of the Year</p>
       </div>
     </div>
   );
 };
 
-export default Number;
+export default TACard;

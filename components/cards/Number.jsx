@@ -1,18 +1,18 @@
 import React from "react";
-import "../../styles/blogscard.css";
+import "@/styles/number.css";
 
-const BlogsCard = () => {
+const Number = () => {
   return (
     <div
-      className="blogsCard"
+      className="numberCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="blogsText">Blogs</p>
+        <p className="numberText">50000</p>
       </div>
     </div>
   );
 };
 
-export default BlogsCard;
+export default Number;

@@ -1,18 +1,18 @@
 import React from "react";
-import "../../styles/typography.css";
+import "@/styles/osncard.css";
 
-const Typography = () => {
+const OSNCard = () => {
   return (
     <div
-      className="typographyCard"
+      className="openSpotNotifierCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="typographyText">typography</p>
+        <p className="openSpotNotifierText">Open Spot Notifier</p>
       </div>
     </div>
   );
 };
 
-export default Typography;
+export default OSNCard;

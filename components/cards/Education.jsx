@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import ASUSeal from "../../public/asuseal.png";
-import "../../styles/education.css";
+import ASUSeal from "@/public/asuseal.png";
+import "@/styles/education.css";
 
 const Education = () => {
   return (

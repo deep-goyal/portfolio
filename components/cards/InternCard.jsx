@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/interncard.css";
+import "@/styles/interncard.css";
 
 const InternCard = () => {
   return (

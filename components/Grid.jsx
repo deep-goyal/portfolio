@@ -11,7 +11,7 @@ import OSNCard from "./cards/OSNCard";
 import GifCard from "./cards/GifCard";
 import BlogsCard from "./cards/BlogsCard";
 import TACard from "./cards/TACard";
-import "../styles/grid.css";
+import "@/styles/grid.css";
 
 const Grid = () => {
   const containerRef = useRef(null);

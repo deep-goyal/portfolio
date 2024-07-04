@@ -1,18 +1,18 @@
 import React from "react";
-import "../../styles/sushiscroll.css";
+import "@/styles/typography.css";
 
-const SushiScroll = () => {
+const Typography = () => {
   return (
     <div
-      className="sushiScrollCard"
+      className="typographyCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
     >
       <div className="content">
-        <p className="sushiScrollText">SUSHI SCROLL</p>
+        <p className="typographyText">typography</p>
       </div>
     </div>
   );
 };
 
-export default SushiScroll;
+export default Typography;

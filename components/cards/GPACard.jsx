@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/gpacard.css";
+import "@/styles/gpacard.css";
 
 const GPACard = () => {
   return (

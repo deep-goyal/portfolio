@@ -1,6 +1,6 @@
 import React from "react";
-import "../../styles/gifcard.css";
-import SphereGIF from "../../public/sphere.gif";
+import "@/styles/gifcard.css";
+import SphereGIF from "@/public/sphere.gif";
 import Image from "next/image";
 
 const GifCard = () => {
