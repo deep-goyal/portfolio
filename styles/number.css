@@ -1,0 +1,49 @@
+.numberCard {
+  position: relative;
+  background-color: #121117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  aspect-ratio: 3/1;
+  border-radius: 4px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease;
+}
+
+.numberText {
+  font-size: 48px;
+  background: linear-gradient(to right, #a62c3d 20%, #7924f0 40%, #a62c3d 60%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .numberText {
+    font-size: 28px;
+  }
+}
+
+.numberCard:hover .content {
+  filter: blur(5px);
+}

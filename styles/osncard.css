@@ -1,0 +1,51 @@
+.openSpotNotifierCard {
+  position: relative;
+  background-color: #121117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  aspect-ratio: 2/1;
+  flex: 1;
+  border-radius: 4px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease;
+}
+
+.openSpotNotifierText {
+  font-size: 36px;
+  background: linear-gradient(to right, #65aca5 20%, #f0f1fe 40%, #65aca5 60%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  text-align: center;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .openSpotNotifierText {
+    font-size: 28px;
+  }
+}
+
+.openSpotNotifierCard:hover .content {
+  filter: blur(5px);
+}

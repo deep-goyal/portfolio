@@ -2,73 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Veracruz";
-  src: url("../public/fonts/veracruzlight.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Veracruz Italic";
-  src: url("../public/fonts/veracruzitalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  font-size: x-large;
-  padding: 10px;
-}
-
-.dark {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-}
-
-:root {
-  --bg-color: #000000;
-  --text-color: #ffffff;
+body {
+  font-family: "Monaco", monospace;
+  font-weight: 500;
+  background-color: #000000;
+  color: white;
+  height: 100vh;
 }
 
 body {
-  font-family: "Veracruz", sans-serif;
+  cursor: none;
 }
 
-#educationsub {
-  font-family: "Veracruz Italic";
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
 }
 
-@keyframes move-diagonally {
+.no-cursor .cursor {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid green;
+  background-color: transparent;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
   0% {
-    transform: translate(0, 0);
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
   }
   100% {
-    transform: translate(5px, -5px);
+    transform: scale(1);
+    opacity: 1;
   }
 }
-
-@keyframes move-back-diagonally {
-  0% {
-    transform: translate(5px, -5px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+* {
+  overflow-y: auto;
 }
 
-.group:hover .hover-diagonal {
-  animation: move-diagonally 0.3s forwards;
-}
-
-.group:not(:hover) .hover-diagonal {
-  animation: move-back-diagonally 0.3s forwards;
-}
-
-.links {
-  z-index: 10;
+::selection {
+  background-color: #0eeb0e;
+  color: #000000;
 }
