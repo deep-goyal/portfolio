@@ -20,7 +20,7 @@ const page = () => {
 
   return (
     <>
-      <PageNav prevUrl="/linecount" nextUrl="/" />
+      <PageNav prevUrl="/linecount" nextUrl="/scai" />
 
       <div className="flex items-reverse w-screen justify-center pt-20 gap-40">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
@@ -47,7 +47,7 @@ const page = () => {
           </ul>
         </div>
         <div className="pr-40 flex-grow">
-          <Image src={Infomaze} alt="ASU Seal" width={300} height={300} />
+          <Image src={Infomaze} alt="ASU Seal" width={500} height={500} />
         </div>
       </div>
 
