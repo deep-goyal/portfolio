@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: "Monaco", monospace;
+  font-family: "custom-monaco", monospace;
   font-weight: 500;
   background-color: #000000;
   color: white;
@@ -23,6 +23,11 @@ body {
   pointer-events: none;
   mix-blend-mode: difference;
   z-index: 9999;
+}
+
+@font-face {
+  font-family: "custom-monaco";
+  src: url("../public/Monaco.ttf");
 }
 
 .no-cursor .cursor {
