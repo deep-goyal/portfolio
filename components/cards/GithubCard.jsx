@@ -9,6 +9,7 @@ const GitHubCard = () => {
       className="githubCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
+      onClick={() => window.open("https://github.com/deep-goyal", "_blank")}
     >
       <div className="content">
         <div className="logoContainer">

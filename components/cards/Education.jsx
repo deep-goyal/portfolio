@@ -9,6 +9,9 @@ const Education = () => {
       className="education-card"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
+      onClick={() => {
+        window.location.href = "/education";
+      }}
     >
       <div className="content">
         <div className="seal-container">

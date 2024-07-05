@@ -17,7 +17,7 @@ export default function Home() {
       setTimeout(() => {
         setIsLoading(false);
       }, 1000);
-    }, 3000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
