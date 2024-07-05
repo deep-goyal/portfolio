@@ -20,7 +20,7 @@ const page = () => {
 
   return (
     <>
-      <PageNav prevUrl="/education" />
+      <PageNav prevUrl="/education" nextUrl="/infomaze" />
 
       <div className="flex flex-col items-center justify-start h-screen w-screen">
         <p className="text-9xl text-gradient">50000</p>
