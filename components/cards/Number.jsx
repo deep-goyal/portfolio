@@ -7,6 +7,9 @@ const Number = () => {
       className="numberCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
+      onClick={() => {
+        window.location.href = "/linecount";
+      }}
     >
       <div className="content">
         <p className="numberText">50000</p>

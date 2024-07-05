@@ -18,9 +18,28 @@
   transition: filter 0.3s ease;
 }
 
+.text-gradient {
+  background: linear-gradient(
+    to bottom right,
+    #a62c3d 20%,
+    #7924f0 40%,
+    #a62c3d 60%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: textShine 3s ease-in-out infinite alternate;
+}
+
 .numberText {
   font-size: 48px;
-  background: linear-gradient(to right, #a62c3d 20%, #7924f0 40%, #a62c3d 60%);
+  background: linear-gradient(
+    to bottom right,
+    #a62c3d 20%,
+    #7924f0 40%,
+    #a62c3d 60%
+  );
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -46,4 +65,10 @@
 
 .numberCard:hover .content {
   filter: blur(5px);
+}
+
+.random-gradient-border {
+  border: 1px dashed transparent;
+  border-image: linear-gradient(135deg, #a62c3d 20%, #7924f0 40%, #a62c3d 60%);
+  border-image-slice: 20;
 }
