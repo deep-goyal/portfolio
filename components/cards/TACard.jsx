@@ -7,6 +7,9 @@ const TACard = () => {
       className="taCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
+      onClick={() => {
+        window.location.href = "/ta";
+      }}
     >
       <div className="content">
         <p className="taText">outstanding ta of the year</p>

@@ -22,7 +22,7 @@ const page = () => {
 
   return (
     <>
-      <PageNav prevUrl="/infomaze" nextUrl="/linecount" />
+      <PageNav prevUrl="/openspotnotifier" nextUrl="/" isEnd={true} />
 
       <div className="flex items-reverse w-screen justify-center pt-10 gap-20">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
@@ -89,6 +89,14 @@ const page = () => {
                 <HiMiniArrowTopRightOnSquare className="pb-[1px]" />
               </div>
             </li>
+          </ul>
+
+          <p className="pt-5 pb-2 underline">courses i've ta'ed for:</p>
+          <ul className="list-disc list-inside">
+            <li>sp24: cse205 - prof. lydia fritz</li>
+            <li>fa23: cse205 - prof. farideh tadayon navabi</li>
+            <li>fa23: cse110 - prof. farideh tadayon navabi</li>
+            <li>fa23: fse404 - prof. adwith malpe, prof. suzan allaham</li>
           </ul>
         </div>
         <div className="pr-40 flex-grow">
