@@ -28,19 +28,14 @@ const page = () => {
           <p className="text-4xl line-clamp-4 pb-5">frontend engineer</p>
           <p>jan 2023 - dec 2023</p>
           <p className="pb-5">asu automation projects @scai-asu</p>
-          <p className="pb-2 underline">fun fact!</p>
-          <ul className="pb-5 list-disc list-inside">
-            <li>
-              in devils invent 2022 - my team and i built an automated
-              attendance management system and won the second place in the
-              competition
-            </li>
-            <li>
-              the project was so impressive that arizona state university found
-              it compelling to fund the project and have us integrate it in all
-              their classes
-            </li>
-          </ul>
+          <p className="pb-2 underline">this project is special</p>
+          <p className="pb-5">
+            in devils invent 2022 - my team and i built an automated attendance
+            management system that won the second prize in the competition. the
+            project was so impressive that arizona state university found it
+            compelling to fund the project and have us integrate it in all their
+            classes
+          </p>
 
           <p className="pb-2 underline">what did i do?</p>
           <ul className="list-disc list-inside">

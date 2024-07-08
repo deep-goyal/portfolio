@@ -47,7 +47,7 @@ const page = () => {
           </ul>
         </div>
         <div className="pr-40 flex-grow">
-          <Image src={Infomaze} alt="ASU Seal" width={500} height={500} />
+          <Image src={Infomaze} alt="Infomaze" width={500} height={500} />
         </div>
       </div>
 
