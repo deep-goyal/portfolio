@@ -19,7 +19,7 @@ const page = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col">
       <PageNav prevUrl="/education" nextUrl="/infomaze" />
 
       <div className="flex flex-col items-center justify-start h-screen w-screen overflow-auto">
@@ -51,7 +51,7 @@ const page = () => {
           top: `${cursorPosition.y}px`,
         }}
       />
-    </>
+    </div>
   );
 };
 
