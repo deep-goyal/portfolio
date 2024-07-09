@@ -7,6 +7,9 @@ const SushiScroll = () => {
       className="sushiScrollCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
+      onClick={() => {
+        window.location.href = "/sushiscroll";
+      }}
     >
       <div className="content">
         <p className="sushiScrollText">SUSHI SCROLL</p>

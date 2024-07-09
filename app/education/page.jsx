@@ -22,7 +22,7 @@ const page = () => {
     <>
       <PageNav prevUrl="/" nextUrl="/linecount" />
 
-      <div className="flex items-reverse w-screen justify-center pt-20 gap-40">
+      <div className="flex items-reverse w-screen justify-center pt-20 gap-20">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
           <p className="text-4xl line-clamp-4 pb-5">
             bachelor of science in computer science
