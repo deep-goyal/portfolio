@@ -2,20 +2,17 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-// This component renders a 3D globe with particles and orbit controls.
 const Globe = () => {
-  // Create a reference to the DOM element that will hold the globe.
   const globeEl = useRef();
 
   useEffect(() => {
-    // Initialize the WebGL renderer and set its size to the window size.
+    // create a new renderer and set its properties
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    // Append the renderer's DOM element to the globeEl reference.
     globeEl.current.appendChild(renderer.domElement);
 
-    // Create the scene, camera, and set up the camera's position.
+    // create a new scene and camera
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -25,21 +22,22 @@ const Globe = () => {
     );
     camera.position.z = 250;
 
-    // Add ambient and directional lights to the scene.
+    // add ambient and directional lights to the scene
     const ambientLight = new THREE.AmbientLight(0xffffff, 9.5);
     scene.add(ambientLight);
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
     directionalLight.position.set(50, 50, 50);
     scene.add(directionalLight);
 
-    // Generate particles for the globe.
-    const particleCount = 10000;
+    // generate particles for the globe
+    const particleCount = 15000;
     const particles = new THREE.BufferGeometry();
     const positions = [];
     const colors = [];
 
     const color = new THREE.Color();
     for (let i = 0; i < particleCount; i++) {
+      // calculate position and color for each particle
       const phi = Math.acos(2 * Math.random() - 1);
       const theta = 2 * Math.PI * Math.random();
 
@@ -49,12 +47,11 @@ const Globe = () => {
 
       positions.push(x, y, z);
 
-      // Color the particles white.
       color.setHSL(0.6, 1.0, 0.7);
       colors.push(color.r, color.g, color.b);
     }
 
-    // Set up the particles' positions and colors.
+    // set up the particle system
     particles.setAttribute(
       "position",
       new THREE.Float32BufferAttribute(positions, 3)
@@ -64,32 +61,50 @@ const Globe = () => {
       new THREE.Float32BufferAttribute(colors, 3)
     );
 
-    // Create a material for the particles.
     const particleMaterial = new THREE.PointsMaterial({
       size: 0.5,
       vertexColors: true,
     });
 
-    // Create the particle system and add it to the scene.
     const particleSystem = new THREE.Points(particles, particleMaterial);
     scene.add(particleSystem);
 
-    // Add OrbitControls and restrict zoom to pinch gestures.
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableZoom = false; // Disable zoom with mouse wheel
+    // create a red dot and an invisible sphere for interaction
+    const redDotGeometry = new THREE.SphereGeometry(1, 32, 32); // Smaller red dot
+    const redDotMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    const redDot = new THREE.Mesh(redDotGeometry, redDotMaterial);
 
-    // Prevent default scroll behavior when holding Ctrl and scrolling.
+    const invisibleSphereGeometry = new THREE.SphereGeometry(5, 32, 32); // Larger invisible sphere for clickable area
+    const invisibleSphereMaterial = new THREE.MeshBasicMaterial({
+      color: 0xff0000,
+      transparent: true,
+      opacity: 0,
+    });
+    const invisibleSphere = new THREE.Mesh(
+      invisibleSphereGeometry,
+      invisibleSphereMaterial
+    );
+
+    redDot.position.set(50, 50, 50);
+    invisibleSphere.position.copy(redDot.position);
+    scene.add(redDot);
+    scene.add(invisibleSphere);
+
+    // set up orbit controls
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = false;
+
+    // handle wheel event to prevent zooming with control key
     renderer.domElement.addEventListener("wheel", (event) => {
       if (event.ctrlKey) {
-        event.preventDefault(); // Prevent default scroll behavior when holding Ctrl
+        event.preventDefault();
       }
     });
 
-    // Enable zoom with pinch gestures.
+    // handle touch events for zooming
     let isPinching = false;
     let initialDistance = null;
 
-    // Handle touch start event to detect pinch gesture.
     renderer.domElement.addEventListener("touchstart", (event) => {
       if (event.touches.length === 2) {
         isPinching = true;
@@ -100,7 +115,6 @@ const Globe = () => {
       }
     });
 
-    // Handle touch move event to adjust zoom based on pinch gesture.
     renderer.domElement.addEventListener("touchmove", (event) => {
       if (isPinching && event.touches.length === 2) {
         const currentDistance = Math.hypot(
@@ -108,28 +122,63 @@ const Globe = () => {
           event.touches[0].clientY - event.touches[1].clientY
         );
         const delta = currentDistance - initialDistance;
-        camera.position.z -= delta * 0.1; // Adjust the zoom speed
+        camera.position.z -= delta * 0.1;
         initialDistance = currentDistance;
       }
     });
 
-    // Handle touch end event to reset pinch gesture state.
     renderer.domElement.addEventListener("touchend", () => {
       isPinching = false;
       initialDistance = null;
     });
 
-    // Animate the scene.
+    // set up raycaster for mouse events
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+
+    // handle click event
+    const onClick = (event) => {
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+      raycaster.setFromCamera(mouse, camera);
+      const intersects = raycaster.intersectObject(invisibleSphere);
+
+      if (intersects.length > 0) {
+        window.location.href = "/hidden-page";
+      }
+    };
+
+    // handle mouse move event
+    const onMouseMove = (event) => {
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+      raycaster.setFromCamera(mouse, camera);
+      const intersects = raycaster.intersectObject(invisibleSphere);
+
+      if (intersects.length > 0) {
+        document.body.classList.add("no-cursor");
+      } else {
+        document.body.classList.remove("no-cursor");
+      }
+    };
+
+    // add event listeners for click and mouse move
+    renderer.domElement.addEventListener("click", onClick);
+    renderer.domElement.addEventListener("mousemove", onMouseMove);
+
+    // animate the scene
     const animate = () => {
       requestAnimationFrame(animate);
-      particleSystem.rotation.y += 0.001;
+      particleSystem.rotation.y += 0.0005; // Reduced rotation speed
       controls.update();
       renderer.render(scene, camera);
     };
 
     animate();
 
-    // Handle window resize.
+    // handle window resize
     const handleResize = () => {
       const { innerWidth, innerHeight } = window;
       renderer.setSize(innerWidth, innerHeight);
@@ -139,9 +188,10 @@ const Globe = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Clean up on component unmount.
     return () => {
       window.removeEventListener("resize", handleResize);
+      renderer.domElement.removeEventListener("click", onClick);
+      renderer.domElement.removeEventListener("mousemove", onMouseMove);
       while (globeEl.current.firstChild) {
         globeEl.current.removeChild(globeEl.current.firstChild);
       }
@@ -152,3 +202,12 @@ const Globe = () => {
 };
 
 export default Globe;
+
+// add a clickable cursor style on the red dot
+// const style = document.createElement("style");
+// style.innerHTML = `
+//   .no-cursor {
+//     cursor: none;
+//   }
+// `;
+// document.head.appendChild(style);
