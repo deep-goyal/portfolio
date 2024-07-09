@@ -22,9 +22,9 @@ const page = () => {
     <>
       <PageNav prevUrl="/education" nextUrl="/infomaze" />
 
-      <div className="flex flex-col items-center justify-start h-screen w-screen">
-        <p className="text-9xl text-gradient">50000</p>
-        <p className="line-clamp-5 pt-10 text-lg px-40 text-center">
+      <div className="flex flex-col items-center justify-start h-screen w-screen overflow-auto">
+        <p className="text-9xl text-gradient overflow-auto">50000</p>
+        <p className="line-clamp-5 pt-10 text-lg px-40 text-center overflow-auto">
           i've typed over 50000 lines of code while learning, teaching, solving
           problems, testing, aligning divs, and most importantly debugging. most
           of my code is written in typeScript, javaScript, c++, and python.
