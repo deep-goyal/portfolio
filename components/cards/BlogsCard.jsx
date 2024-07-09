@@ -7,6 +7,9 @@ const BlogsCard = () => {
       className="blogsCard"
       onMouseEnter={() => document.body.classList.add("no-cursor")}
       onMouseLeave={() => document.body.classList.remove("no-cursor")}
+      onClick={() => {
+        window.location.href = "/blogs";
+      }}
     >
       <div className="content">
         <p className="blogsText">blogs</p>

@@ -21,7 +21,7 @@ const page = () => {
 
   return (
     <>
-      <PageNav prevUrl="/infomaze" nextUrl="/linecount" />
+      <PageNav prevUrl="/infomaze" nextUrl="/blogs" />
 
       <div className="flex items-reverse w-screen justify-center pt-20 gap-20">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
