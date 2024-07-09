@@ -19,10 +19,10 @@ const page = () => {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col h-screen w-screen">
       <PageNav prevUrl="/education" nextUrl="/infomaze" />
 
-      <div className="flex flex-col items-center justify-start h-screen w-screen overflow-auto">
+      <div className="flex flex-col items-center justify-start">
         <p className="text-9xl text-gradient overflow-auto">50000</p>
         <p className="line-clamp-5 pt-10 text-lg px-40 text-center overflow-auto">
           i've typed over 50000 lines of code while learning, teaching, solving
@@ -36,7 +36,7 @@ const page = () => {
           {techStack.map((tech) => (
             <div
               key={tech.name}
-              className="bg-[#121117] random-gradient-border flex justify-center items-center rounded-[4px] p-4 hover:blur-[2px] "
+              className="bg-[#121117] overflow-hidden random-gradient-border flex justify-center items-center rounded-[4px] p-4 hover:blur-[2px] "
             >
               <Image src={tech.url} alt={tech.name} width={64} height={64} />
             </div>
