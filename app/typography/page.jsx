@@ -18,7 +18,7 @@ const page = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col w-screen h-screen">
       <PageNav prevUrl="/blogs" nextUrl="/sushiscroll" />
 
       <div className="px-40 pt-10">
@@ -40,7 +40,7 @@ const page = () => {
           top: `${cursorPosition.y}px`,
         }}
       />
-    </>
+    </div>
   );
 };
 

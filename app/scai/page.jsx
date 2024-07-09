@@ -20,10 +20,10 @@ const page = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col w-screen h-screen">
       <PageNav prevUrl="/infomaze" nextUrl="/blogs" />
 
-      <div className="flex items-reverse w-screen justify-center pt-20 gap-20">
+      <div className="flex items-reverse justify-center pt-20 gap-20">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
           <p className="text-4xl line-clamp-4 pb-5">frontend engineer</p>
           <p>jan 2023 - dec 2023</p>
@@ -61,7 +61,7 @@ const page = () => {
           top: `${cursorPosition.y}px`,
         }}
       />
-    </>
+    </div>
   );
 };
 

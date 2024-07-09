@@ -19,12 +19,12 @@ const page = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col w-screen h-screen">
       <PageNav prevUrl="/linecount" nextUrl="/scai" />
 
-      <div className="flex items-reverse w-screen justify-center pt-20 gap-40">
+      <div className="flex items-reverse justify-center pt-20 gap-40">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
-          <p className="text-4xl line-clamp-4 pb-5">software engineer intern</p>
+          <p className="text-4xl line-clamp-6 pb-5">software engineer intern</p>
           <p>jun 2024 - jul 2024</p>
           <p className="pb-5">infomaze technologies, mysore ka, india</p>
           <p className="pb-2 underline">what did i do?</p>
@@ -58,7 +58,7 @@ const page = () => {
           top: `${cursorPosition.y}px`,
         }}
       />
-    </>
+    </div>
   );
 };
 
