@@ -11,7 +11,7 @@ const Globe = () => {
   useEffect(() => {
     // create a new WebGLRenderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2); // Adjust size for the flexbox
     renderer.setPixelRatio(window.devicePixelRatio);
     globeEl.current.appendChild(renderer.domElement);
 
@@ -23,7 +23,7 @@ const Globe = () => {
       0.1,
       1000
     );
-    camera.position.z = 250;
+    camera.position.z = 150; // Adjusted position for the smaller globe
 
     // add ambient and directional light to the scene
     const ambientLight = new THREE.AmbientLight(0xffffff, 9.5);
@@ -44,9 +44,9 @@ const Globe = () => {
       const phi = Math.acos(2 * Math.random() - 1);
       const theta = 2 * Math.PI * Math.random();
 
-      const x = 100 * Math.sin(phi) * Math.cos(theta);
-      const y = 100 * Math.sin(phi) * Math.sin(theta);
-      const z = 100 * Math.cos(phi);
+      const x = 50 * Math.sin(phi) * Math.cos(theta); // Reduced size
+      const y = 50 * Math.sin(phi) * Math.sin(theta); // Reduced size
+      const z = 50 * Math.cos(phi); // Reduced size
 
       positions.push(x, y, z);
 
@@ -73,48 +73,6 @@ const Globe = () => {
     // create a particle system and add it to the scene
     const particleSystem = new THREE.Points(particles, particleMaterial);
     scene.add(particleSystem);
-
-    // create a chunk of atoms (small dots) inside the sphere
-    const atomCount = 500;
-    const atoms = new THREE.BufferGeometry();
-    const atomPositions = [];
-    const atomColors = [];
-
-    // create a color for the atoms
-    for (let i = 0; i < atomCount; i++) {
-      const phi = Math.acos(2 * Math.random() - 1);
-      const theta = 2 * Math.PI * Math.random();
-
-      // Reduce the size by 25%
-      const x = 15 * Math.sin(phi) * Math.cos(theta); // Reduced from 20
-      const y = 15 * Math.sin(phi) * Math.sin(theta); // Reduced from 20
-      const z = 15 * Math.cos(phi); // Reduced from 20
-
-      atomPositions.push(x, y, z);
-
-      color.setHSL(0.0, 1.0, 0.5); // Red color for atoms
-      atomColors.push(color.r, color.g, color.b);
-    }
-
-    // set the attributes for the atoms
-    atoms.setAttribute(
-      "position",
-      new THREE.Float32BufferAttribute(atomPositions, 3)
-    );
-    atoms.setAttribute(
-      "color",
-      new THREE.Float32BufferAttribute(atomColors, 3)
-    );
-
-    // create a material for the atoms
-    const atomMaterial = new THREE.PointsMaterial({
-      size: 1,
-      vertexColors: true,
-    });
-
-    // create an atom system and add it to the scene
-    const atomSystem = new THREE.Points(atoms, atomMaterial);
-    scene.add(atomSystem);
 
     // create orbit controls for the camera
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -158,42 +116,6 @@ const Globe = () => {
       initialDistance = null;
     });
 
-    // create a raycaster and mouse vector for detecting mouse enter events
-    const raycaster = new THREE.Raycaster();
-    const mouse = new THREE.Vector2();
-
-    // handle mouse move events to detect atom area
-    const onMouseMove = (event) => {
-      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-      raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObject(atomSystem);
-
-      if (intersects.length > 0) {
-        document.body.classList.add("no-cursor");
-      } else {
-        document.body.classList.remove("no-cursor");
-      }
-    };
-
-    // handle click events to redirect to /secret
-    const onClick = (event) => {
-      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-      raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObject(atomSystem);
-
-      if (intersects.length > 0) {
-        window.location.href = "/secret";
-      }
-    };
-
-    // add event listeners for mouse move and click
-    renderer.domElement.addEventListener("mousemove", onMouseMove);
-    renderer.domElement.addEventListener("click", onClick);
-
     // create an animation loop
     const animate = () => {
       requestAnimationFrame(animate);
@@ -208,7 +130,7 @@ const Globe = () => {
     // handle window resize
     const handleResize = () => {
       const { innerWidth, innerHeight } = window;
-      renderer.setSize(innerWidth, innerHeight);
+      renderer.setSize(innerWidth / 2, innerHeight / 2); // Adjust size for the flexbox
       camera.aspect = innerWidth / innerHeight;
       camera.updateProjectionMatrix();
     };
@@ -219,8 +141,6 @@ const Globe = () => {
     // clean up function to remove event listeners and child elements
     return () => {
       window.removeEventListener("resize", handleResize);
-      renderer.domElement.removeEventListener("mousemove", onMouseMove);
-      renderer.domElement.removeEventListener("click", onClick);
       while (globeEl.current.firstChild) {
         globeEl.current.removeChild(globeEl.current.firstChild);
       }

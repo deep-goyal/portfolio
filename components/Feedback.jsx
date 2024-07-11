@@ -27,7 +27,7 @@ const Feedback = () => {
   return (
     <div className="flex flex-col w-screen h-screen justify-start goudy pt-20 gap-5 items-start pl-40">
       <p className="text-white mb-2 text-xl goudy">
-        thoughts? feel free to send me anything here.
+        thoughts? feel free to type anything here.
       </p>
 
       <textarea

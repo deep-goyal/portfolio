@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Grid from "../components/Grid";
 import Header from "../components/Header";
 import LoadingScreen from "../components/LoadingScreen";
@@ -12,6 +12,9 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const lastMouseMoveTime = useRef(Date.now());
+  const lastMousePos = useRef({ x: 0, y: 0 });
+  const thresholdSpeed = 15; //sensitivity
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -26,7 +29,26 @@ export default function Home() {
 
   useEffect(() => {
     const handleMouseMove = (event) => {
-      setCursorPosition({ x: event.clientX, y: event.clientY });
+      const currentTime = Date.now();
+      const timeDiff = currentTime - lastMouseMoveTime.current;
+
+      if (timeDiff === 0) return; //avoid redirection on zero movements
+
+      const currentPos = { x: event.clientX, y: event.clientY };
+      const distance = Math.sqrt(
+        Math.pow(currentPos.x - lastMousePos.current.x, 2) +
+          Math.pow(currentPos.y - lastMousePos.current.y, 2)
+      );
+
+      const speed = distance / timeDiff; // pixels per millisecond
+
+      if (speed > thresholdSpeed) {
+        window.open("/secret", "_blank");
+      }
+
+      lastMouseMoveTime.current = currentTime;
+      lastMousePos.current = currentPos;
+      setCursorPosition(currentPos);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -47,9 +69,12 @@ export default function Home() {
 
         <Grid />
 
-        <Globe />
-
-        <Feedback />
+        <div className="flex justify-start align-start w-screen">
+          <Feedback />
+          <div className="overflow-hidden">
+            <Globe />
+          </div>
+        </div>
 
         <div
           className="cursor"
