@@ -48,9 +48,7 @@ const Feedback = () => {
       </div>
 
       {feedbackSent && (
-        <div className="text-green-500 text-sm mt-2">
-          feedback submitted successfully! thanks!
-        </div>
+        <div className="text-green-500 text-xl mt-2">message sent! thanks!</div>
       )}
     </div>
   );

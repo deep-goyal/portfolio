@@ -14,7 +14,7 @@ export default function Home() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const lastMouseMoveTime = useRef(Date.now());
   const lastMousePos = useRef({ x: 0, y: 0 });
-  const thresholdSpeed = 15; //sensitivity
+  const thresholdSpeed = 25; //sensitivity
 
   useEffect(() => {
     const timer = setTimeout(() => {
