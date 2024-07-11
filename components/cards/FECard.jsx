@@ -12,7 +12,7 @@ const FECard = () => {
       }}
     >
       <div className="content">
-        <p className="frontendEngineerText">frontend engineer</p>
+        <p className="frontendEngineerText theneue">frontend engineer</p>
       </div>
     </div>
   );

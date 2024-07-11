@@ -1,23 +1,9 @@
-"use client";
-
 import React, { useState } from "react";
 import { LuArrowUpRightFromCircle } from "react-icons/lu";
 
 const Feedback = () => {
   const [inputValue, setInputValue] = useState("");
-  const [showSubmitButton, setShowSubmitButton] = useState(false);
   const [feedbackSent, setFeedbackSent] = useState(false);
-
-  // Handle input change and show submit button
-  const handleChange = (event) => {
-    const value = event.target.value;
-    setInputValue(value);
-    if (value.length > 0) {
-      setShowSubmitButton(true);
-    } else {
-      setShowSubmitButton(false);
-    }
-  };
 
   // Handle feedback submission
   const handleSubmit = async () => {
@@ -34,39 +20,33 @@ const Feedback = () => {
 
     if (response.ok) {
       setInputValue("");
-      setShowSubmitButton(false);
       setFeedbackSent(true);
     }
   };
 
   return (
-    <div className="flex flex-col w-screen h-screen justify-center gap-5 items-start pl-40">
-      <label className="text-white mb-2 text-lg">
-        thanks for stopping by! <br /> feel free to type out an anonymous
-        feedback below
-      </label>
+    <div className="flex flex-col w-screen h-screen justify-start goudy pt-20 gap-5 items-start pl-40">
+      <p className="text-white mb-2 text-xl goudy">
+        thoughts? feel free to send me anything here.
+      </p>
+
+      <textarea
+        value={inputValue}
+        placeholder="enter your message..."
+        className="bg-[#121117] p-2 rounded-[4px] w-96 h-40 cursor-none text-lg focus:outline-none pr-10"
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+
       <div
-        className="relative mt-2"
+        onMouseEnter={() => document.body.classList.add("no-cursor")}
         onMouseLeave={() => document.body.classList.remove("no-cursor")}
+        onClick={handleSubmit}
+        className="flex gap-1 text-sm justify-center items-center bg-[#121117] hover:bg-gray-700 transition-opacity duration-400 px-4 py-2 rounded-2xl"
       >
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleChange}
-          placeholder="enter your feedback"
-          className="bg-[#121117] p-2 rounded-[4px] w-80 h-10 cursor-none text-sm focus:outline-none pr-10"
-        />
-        {showSubmitButton && (
-          <div
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 w-10 flex items-center justify-center hover:text-xl hover:text-gray-500"
-            onMouseEnter={() => document.body.classList.add("no-cursor")}
-            onMouseLeave={() => document.body.classList.remove("no-cursor")}
-            onClick={handleSubmit}
-          >
-            <LuArrowUpRightFromCircle />
-          </div>
-        )}
+        <p className="text-lg"> send</p>
+        <LuArrowUpRightFromCircle className="pb-[2px]" />
       </div>
+
       {feedbackSent && (
         <div className="text-green-500 text-sm mt-2">
           feedback submitted successfully! thanks!

@@ -12,7 +12,7 @@ const InternCard = () => {
       }}
     >
       <div className="content">
-        <p className="sweInternText">swe intern</p>
+        <p className="sweInternText raleway px-20 pb-5">swe intern</p>
       </div>
     </div>
   );

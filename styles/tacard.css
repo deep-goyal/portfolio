@@ -20,8 +20,8 @@
 }
 
 .taText {
-  font-size: 36px;
-  background: linear-gradient(to right, #ad5f09 20%, #d60bcc 40%, #ad5f09 60%);
+  font-size: 48px;
+  background: linear-gradient(to right, #7d1dd2 20%, #d60bcc 40%, #7d1dd2 60%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;

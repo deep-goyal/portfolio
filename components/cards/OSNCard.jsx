@@ -12,7 +12,7 @@ const OSNCard = () => {
       }}
     >
       <div className="content">
-        <p className="openSpotNotifierText">open spot notifier</p>
+        <p className="openSpotNotifierText ostrichsans">open spot notifier</p>
       </div>
     </div>
   );

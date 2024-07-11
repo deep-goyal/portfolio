@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  font-family: "custom-monaco", monospace;
-  font-weight: 500;
+  font-family: "Monaco", monospace;
+  font-weight: 400;
   background-color: #000000;
   color: white;
   height: 100vh;
@@ -12,6 +12,58 @@ body {
 
 body {
   cursor: none;
+}
+
+.goudy {
+  font-family: "Goudy Bookletter 1911";
+  font-weight: 400;
+  color: white;
+}
+
+.fanwood {
+  font-family: "Fanwood Text Italic";
+  font-weight: 400;
+}
+
+.blackout {
+  font-family: "Blackout";
+}
+
+.ostrichsans {
+  font-family: "Ostrich Sans Black";
+}
+
+.raleway {
+  font-family: "Raleway Bold";
+}
+
+.theneue {
+  font-family: "The Neue";
+}
+
+@font-face {
+  font-family: "The Neue";
+  src: url("../public/TheNeue-Black.ttf");
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("../public/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Ostrich Sans Black";
+  src: url("../public/ostrichsansblack.ttf");
+}
+
+@font-face {
+  font-family: "Fanwood Text Italic";
+  src: url("../public/fanwoodtextitalic.ttf");
+}
+
+@font-face {
+  font-family: "Blackout";
+  src: url("../public/blackout.ttf");
 }
 
 .cursor {
@@ -23,11 +75,6 @@ body {
   pointer-events: none;
   mix-blend-mode: difference;
   z-index: 9999;
-}
-
-@font-face {
-  font-family: "custom-monaco";
-  src: url("../public/Monaco.ttf");
 }
 
 .no-cursor .cursor {
