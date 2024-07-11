@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import LoadingScreen from "../components/LoadingScreen";
 import LineAnimation from "../components/LineAnimation";
 import Globe from "./Globe";
+import Feedback from "./Feedback";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +48,8 @@ export default function Home() {
         <Grid />
 
         <Globe />
+
+        <Feedback />
 
         <div
           className="cursor"

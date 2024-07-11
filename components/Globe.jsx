@@ -228,7 +228,7 @@ const Globe = () => {
   }, []);
 
   // return the globe element
-  return <div ref={globeEl} style={{ width: "100%", height: "100vh" }}></div>;
+  return <div ref={globeEl} className="w-screen h-screen"></div>;
 };
 
 // export the Globe component
