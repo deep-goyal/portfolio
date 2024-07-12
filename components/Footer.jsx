@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full pt-20 pl-40 pb-20 gap-20 items-start">
+    <div className="flex flex-col w-full pt-20 pl-40 pb-20 gap-10 items-start">
       <div className="flex gap-5">
         <p
           className="text-4xl hover:text-gray-800"
@@ -43,6 +43,10 @@ const Footer = () => {
           <FaLinkedin />
         </p>
       </div>
+
+      <p className="goudy text-[15px] pb-20">
+        DID YOU TRY MOVING THE CURSOR SUPER FAST?
+      </p>
 
       <p className="goudy text-[10px]">
         © 2024 DEEP GOYAL. ALL RIGHTS RESERVED.
