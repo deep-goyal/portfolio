@@ -21,28 +21,28 @@ const page = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col w-screen h-screen">
       <PageNav prevUrl="/openspotnotifier" nextUrl="/" isEnd={true} />
 
-      <div className="flex items-reverse w-screen justify-center pt-10 gap-20">
+      <div className="flex items-reverse justify-center pt-10 gap-20">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
-          <p className="text-4xl line-clamp-4 pb-5">teaching assistant</p>
-          <p>aug 2023 - present</p>
-          <p className="pb-5">ira fulton schools of engineering</p>
+          <p className="text-4xl line-clamp-4 pb-5">Teaching Assistant</p>
+          <p>Aug 2023 - Present</p>
+          <p className="pb-5">Ira Fulton Schools of Engineering</p>
 
-          <p className="pb-2 underline">what i do?</p>
+          <p className="pb-2 underline">My Work</p>
           <ul className="list-disc list-inside">
             <li>
-              i teach object oriented programming and data structures in java to
-              over 1000 students
+              I teach Object Oriented Programming and Data Structures in Java to
+              over 1000 students.
             </li>
             <li>
-              i hold regular office hours, plan review sessions, and manage
-              other teaching assistants
+              I hold regular office hours, plan review sessions, and manage
+              other teaching assistants.
             </li>
           </ul>
 
-          <p className="pb-2 pt-5 underline">see my work</p>
+          <p className="pb-2 pt-5 underline">See My Work</p>
           <ul className="list-disc list-inside">
             <li
               onMouseEnter={() => document.body.classList.add("no-cursor")}
@@ -56,7 +56,7 @@ const page = () => {
               }}
             >
               <div className="inline-flex gap-1 items-center">
-                sp24- final study guide
+                SP24- Final Study Guide
                 <HiMiniArrowTopRightOnSquare className="pb-[1px]" />
               </div>
             </li>
@@ -72,7 +72,7 @@ const page = () => {
               }}
             >
               <div className="inline-flex gap-1 items-center">
-                sp24- midterm study guide
+                SP24- Midterm Study Guide
                 <HiMiniArrowTopRightOnSquare className="pb-[1px]" />
               </div>
             </li>
@@ -85,18 +85,18 @@ const page = () => {
               }}
             >
               <div className="inline-flex gap-1 items-center">
-                fa23- final review session
+                FA23- Final Reviews
                 <HiMiniArrowTopRightOnSquare className="pb-[1px]" />
               </div>
             </li>
           </ul>
 
-          <p className="pt-5 pb-2 underline">courses i've ta'ed for:</p>
+          <p className="pt-5 pb-2 underline">List of Courses I've Assisted</p>
           <ul className="list-disc list-inside">
-            <li>sp24: cse205 - prof. lydia fritz</li>
-            <li>fa23: cse205 - prof. farideh tadayon navabi</li>
-            <li>fa23: cse110 - prof. farideh tadayon navabi</li>
-            <li>fa23: fse404 - prof. adwith malpe, prof. suzan allaham</li>
+            <li>SP24: CSE205 - Prof. Lydia Fritz</li>
+            <li>FA23: CSE205 - Prof. Farideh Tadayon Navabi</li>
+            <li>FA23: CSE110 - Prof. Farideh Tadayon Navabi</li>
+            <li>FA23: FSE404 - Prof. Adwith Malpe, Prof. Suzan Allaham</li>
           </ul>
         </div>
         <div className="pr-40 flex-grow">
@@ -111,7 +111,7 @@ const page = () => {
           top: `${cursorPosition.y}px`,
         }}
       />
-    </>
+    </div>
   );
 };
 

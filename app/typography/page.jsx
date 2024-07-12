@@ -18,18 +18,19 @@ const page = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col w-screen h-screen">
       <PageNav prevUrl="/blogs" nextUrl="/sushiscroll" />
 
       <div className="px-40 pt-10">
         <p className="text-4xl pb-10">typography</p>
         <p className="pb-10">the font of the month is....drumroll..</p>
 
-        <p className="text-9xl pb-5 hoverdecor">monaco</p>
+        <p className="text-9xl pb-5 hoverdecor monaco">MONACO</p>
 
         <p>
-          monaco is quite an elegant font. it is readable, clean, and there are
-          no funky strokes like papyrus
+          Monaco is quite an elegant font. It is readable, clean, and there are
+          no funky strokes like papyrus. If you are a developer or someone who
+          reads a lot on a daily basis, monaco could be your go-to font.
         </p>
       </div>
 
@@ -40,7 +41,7 @@ const page = () => {
           top: `${cursorPosition.y}px`,
         }}
       />
-    </>
+    </div>
   );
 };
 

@@ -12,7 +12,7 @@ const BlogsCard = () => {
       }}
     >
       <div className="content">
-        <p className="blogsText">blogs</p>
+        <p className="blogsText blackout">blogs</p>
       </div>
     </div>
   );

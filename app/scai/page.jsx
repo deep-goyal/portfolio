@@ -20,33 +20,32 @@ const page = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col w-screen h-screen">
       <PageNav prevUrl="/infomaze" nextUrl="/blogs" />
 
-      <div className="flex items-reverse w-screen justify-center pt-20 gap-20">
+      <div className="flex items-reverse justify-center pt-20 gap-20">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
-          <p className="text-4xl line-clamp-4 pb-5">frontend engineer</p>
-          <p>jan 2023 - dec 2023</p>
-          <p className="pb-5">asu automation projects @scai-asu</p>
-          <p className="pb-2 underline">this project is special</p>
+          <p className="text-4xl line-clamp-4 pb-5">Frontend Engineer</p>
+          <p>Jan 2023 - Dec 2023</p>
+          <p className="pb-5">ASU Automation Projects @SCAI-ASU</p>
+          <p className="pb-2 underline">This Project is Special</p>
           <p className="pb-5">
-            in devils invent 2022 - my team and i built an automated attendance
-            management system that won the second prize in the competition. the
-            project was so impressive that arizona state university found it
-            compelling to fund the project and have us integrate it in all their
-            classes
+            In Devils Invent 2022 - my team and I built an automated attendance
+            management system that won the second prize in the competition. The
+            project was so impressive that ASU found it compelling to fund the
+            project and have us integrate it in all their classes.
           </p>
 
-          <p className="pb-2 underline">what did i do?</p>
+          <p className="pb-2 underline">My Work</p>
           <ul className="list-disc list-inside">
             <li>
-              i designed user interface components using figma and built them
-              with react and tailwindcss
+              I designed user interface components using Figma and built them
+              with React and TailwindCSS.
             </li>
             <li>
-              i developed postman scripts to test 10 of our rest api endpoints
+              i developed Postman scripts to test 10 of our rest api endpoints.
             </li>
-            <li>i taught my teammates html, css and js </li>
+            <li>I taught my teammates HTML, CSS and JS. </li>
           </ul>
         </div>
         <div className="pr-40 flex-grow">
@@ -61,7 +60,7 @@ const page = () => {
           top: `${cursorPosition.y}px`,
         }}
       />
-    </>
+    </div>
   );
 };
 

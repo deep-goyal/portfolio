@@ -7,7 +7,7 @@ function useJumbledText(text, interval) {
 
   useEffect(() => {
     const chars =
-      "abcdefghijklmnopqrstuvwxyźщертыуиопасдфгхйкл;зхцвбнмぬふあうえおやゆよわほへたていすかんなにらぜむちとしはきくまのりれけつさそひこみもねるめ";
+      "abcdefghijklmnopqrstuvwxyぬふあうえおやゆよわほへたていすかんなにらぜむちとしはきくまのりれけつさそひこみもねるめ";
     let iterations = 0;
     const jumbleInterval = setInterval(() => {
       if (iterations >= 20) {
@@ -38,12 +38,11 @@ function useJumbledText(text, interval) {
 
 export default function Header() {
   const translations = [
-    "hi, i'm deep!",
+    "Hi, I'm Deep!",
+    "Hi, I'm Deep!",
     "hallo, ich bin deep!",
-    "こんにちは、ディープです！",
-    "salut, je suis deep!",
-    "hola, soy deep!",
-    "привет, я дип!",
+    // "こんにちは、ディープです！",
+    // "hola, soy deep!",
   ];
 
   const [currentTranslation, setCurrentTranslation] = useState(translations[0]);
@@ -56,7 +55,7 @@ export default function Header() {
         const nextIndex = (currentIndex + 1) % translations.length;
         return translations[nextIndex];
       });
-    }, 8000);
+    }, 30000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -64,12 +63,12 @@ export default function Header() {
   return (
     <div className="flex flex-col items-start main-container header-container mt-40">
       <div className="flex flex-col gap-10 px-2xl">
-        <p className="text-4xl ml-40 mt-40">{jumbledText}</p>
+        <p className="text-6xl ml-40 mt-40 font-bold goudy">{jumbledText}</p>
         <div className="flex ml-40">
-          <p className="text-xl max-w-lg">
-            i'm a junior at arizona state. i love building software and teaching
-            cs, and i hold a distinct passion for building memorable experiences
-            through front-end interfaces! i aspire to be a great web engineer!
+          <p className="text-2xl max-w-lg font-normal goudy">
+            I'm a Full Stack Developer with a distinct passion in designing and
+            building frontend interfaces. I'm also a Junior and a Teaching
+            Assistant at Arizona State University.
           </p>
         </div>
       </div>

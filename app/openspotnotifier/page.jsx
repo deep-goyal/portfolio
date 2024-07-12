@@ -20,13 +20,13 @@ const page = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col w-screen h-screen">
       <PageNav prevUrl="/sushiscroll" nextUrl="/ta" />
 
-      <div className="flex items-reverse w-screen justify-center pt-20 gap-40">
+      <div className="flex items-reverse justify-center pt-20 gap-40">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
           <div className="text-4xl line-clamp-4 pb-5 inline-flex gap-2">
-            <p>open spot notifier</p>
+            <p>Open Spot Notifier</p>
             <HiMiniArrowTopRightOnSquare
               className="transition-colors duration-300 ease-in-out hover:text-gray-500"
               onMouseEnter={() => document.body.classList.add("no-cursor")}
@@ -40,20 +40,20 @@ const page = () => {
             />
           </div>
           <p className="pb-2">
-            for decades, asu students have faced a relentless battle to secure
-            classes with their preferred professors. these coveted spots open
+            For decades, asu students have faced a relentless battle to secure
+            classes with their preferred professors. These coveted spots open
             briefly, and platforms like coursicle and classrabbit often monetize
             on this by charging an absurd fee to provide notifications of these
             openings, leaving students in frustration.
           </p>
 
           <p className="pb-2">
-            enter my open-source selenium script -- a swift and efficient
-            savior. faster and more reliable than existing platforms, it ensures
+            Enter my open-source selenium script -- a swift and efficient
+            savior. Faster and more reliable than existing platforms, it ensures
             students receive real-time class opening alerts.
           </p>
 
-          <p>and it's integrated with discord!</p>
+          <p>AND! It's integrated with discord!</p>
         </div>
         <div className="pr-40 flex-grow">
           <Image src={Wojak} width={1500} height={1000} />
@@ -67,7 +67,7 @@ const page = () => {
           top: `${cursorPosition.y}px`,
         }}
       />
-    </>
+    </div>
   );
 };
 
