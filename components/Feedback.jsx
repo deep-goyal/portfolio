@@ -27,12 +27,12 @@ const Feedback = () => {
   return (
     <div className="flex flex-col w-screen  justify-start goudy pt-20 gap-5 items-start pl-40">
       <p className="text-white mb-2 text-xl goudy">
-        thoughts? feel free to type anything here.
+        Thoughts? Feel free to type anything here!
       </p>
 
       <textarea
         value={inputValue}
-        placeholder="enter your message..."
+        placeholder="Enter your message..."
         className="bg-[#121117] p-2 rounded-[4px] w-96 h-40 cursor-none text-lg focus:outline-none pr-10"
         onChange={(e) => setInputValue(e.target.value)}
       />
@@ -43,12 +43,12 @@ const Feedback = () => {
         onClick={handleSubmit}
         className="flex gap-1 text-sm justify-center items-center bg-[#121117] hover:bg-gray-800 transition-opacity duration-400 px-4 py-2 rounded-2xl"
       >
-        <p className="text-lg"> send</p>
+        <p className="text-lg"> Send</p>
         <LuArrowUpRightFromCircle className="pb-[2px]" />
       </div>
 
       {feedbackSent && (
-        <div className="text-green-500 text-xl mt-2">message sent! thanks!</div>
+        <div className="text-green-500 text-xl mt-2">Message sent! Thanks!</div>
       )}
     </div>
   );
