@@ -22,6 +22,12 @@ const Footer = () => {
           className="text-4xl hover:text-gray-800"
           onMouseEnter={() => document.body.classList.add("no-cursor")}
           onMouseLeave={() => document.body.classList.remove("no-cursor")}
+          onClick={() => {
+            window.open(
+              "https://drive.google.com/drive/folders/1nPwmSJ46BZWsARDnp3AnWryQZEGik-ZG?usp=share_link",
+              "_blank"
+            );
+          }}
         >
           <IoDocumentTextOutline />
         </p>
