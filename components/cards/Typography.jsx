@@ -12,7 +12,7 @@ const Typography = () => {
       }}
     >
       <div className="content">
-        <p className="typographyText">typography</p>
+        <p className="typographyText monaco">typography</p>
       </div>
     </div>
   );

@@ -38,8 +38,9 @@ function useJumbledText(text, interval) {
 
 export default function Header() {
   const translations = [
-    "hi, i'm deep!",
-    // "hallo, ich bin deep!",
+    "Hi, I'm Deep!",
+    "Hi, I'm Deep!",
+    "hallo, ich bin deep!",
     // "こんにちは、ディープです！",
     // "hola, soy deep!",
   ];
@@ -64,10 +65,10 @@ export default function Header() {
       <div className="flex flex-col gap-10 px-2xl">
         <p className="text-6xl ml-40 mt-40 font-bold goudy">{jumbledText}</p>
         <div className="flex ml-40">
-          <p className="text-3xl max-w-lg font-normal antialiased goudy">
-            i'm a full stack developer with a distinct passion in designing and
-            building frontend interfaces. i'm also a junior and a teaching
-            assistant at arizona state university.
+          <p className="text-2xl max-w-lg font-normal goudy">
+            I'm a Full Stack Developer with a distinct passion in designing and
+            building frontend interfaces. I'm also a Junior and a Teaching
+            Assistant at Arizona State University.
           </p>
         </div>
       </div>

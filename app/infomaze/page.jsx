@@ -24,25 +24,25 @@ const page = () => {
 
       <div className="flex items-reverse justify-center pt-20 gap-40">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
-          <p className="text-4xl line-clamp-6 pb-5">software engineer intern</p>
-          <p>jun 2024 - jul 2024</p>
-          <p className="pb-5">infomaze technologies, mysore ka, india</p>
-          <p className="pb-2 underline">what did i do?</p>
+          <p className="text-4xl line-clamp-6 pb-5">Software Engineer Intern</p>
+          <p>Jun 2024 - Jul 2024</p>
+          <p className="pb-5">Infomaze Technologies, Mysore KA, India</p>
+          <p className="pb-2 underline">My Work</p>
           <ul className="pb-5 list-disc list-inside">
             <li>
-              i worked with a product manager to build mobile apps using react
-              native and backend apis using expressjs and mongodb
+              I worked with a product manager to build mobile apps using React
+              Native and backend apis using ExpressJS and Mongodb.
             </li>
-            <li>i designed user interfaces in figma</li>
+            <li>I designed user interfaces in Figma.</li>
             <li>
-              i collected, annotated data, and trained an nlp model and later
+              I collected, annotated data, and trained an NLP model and later
               built a linear programming model to minimize costs for a local
-              printing business
+              printing business.
             </li>
             <li>
-              not only that, but i also learnt some pretty cool technologies
-              while building stuff for this company- scikit-learn, numpy,
-              pandas, agile dev, aws, azure
+              I also learnt some pretty cool technologies while building stuff
+              for this company. Some of which include- Scikit-Learn, Numpy,
+              Pandas, Agile Development, AWS, Azure.
             </li>
           </ul>
         </div>

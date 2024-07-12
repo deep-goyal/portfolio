@@ -12,7 +12,7 @@ const TACard = () => {
       }}
     >
       <div className="content">
-        <p className="taText fanwood">outstanding ta of the year</p>
+        <p className="taText fanwood">Outstanding TA of the Year</p>
       </div>
     </div>
   );

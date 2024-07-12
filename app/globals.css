@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: "Monaco", monospace;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
   font-weight: 400;
   background-color: #000000;
   color: white;
@@ -15,9 +15,14 @@ body {
 }
 
 .goudy {
-  font-family: "Goudy Bookletter 1911";
+  /* font-family: "Goudy Bookletter 1911"; */
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
   font-weight: 400;
   color: white;
+}
+
+.monaco {
+  font-family: "Monaco", monospace;
 }
 
 .fanwood {
@@ -105,7 +110,7 @@ body {
 }
 
 ::selection {
-  background-color: #0eeb0e;
+  background-color: #89ff29;
   color: #000000;
 }
 

@@ -27,7 +27,7 @@ const page = () => {
       <div className="flex items-reverse justify-center pt-20 gap-40">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
           <div className="text-4xl line-clamp-4 pb-5 inline-flex gap-2">
-            <p>sushiscroll</p>
+            <p>Sushi Scroll</p>
             <HiMiniArrowTopRightOnSquare
               className="transition-colors duration-300 ease-in-out hover:text-gray-500"
               onMouseEnter={() => document.body.classList.add("no-cursor")}
@@ -49,8 +49,8 @@ const page = () => {
             />
           </div>
           <p className="pb-2">
-            a special anime exploration experience --built with react, anilist
-            graphql, chakraui and typescript
+            A special anime exploration experience --built with React, Anilist
+            GraphQL, ChakraUI and Typescript.
           </p>
         </div>
         <div className="pr-40 flex-grow">

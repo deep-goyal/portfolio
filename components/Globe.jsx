@@ -148,7 +148,7 @@ const Globe = () => {
   }, []);
 
   // return the globe element
-  return <div ref={globeEl} className="w-screen h-screen"></div>;
+  return <div ref={globeEl} className="w-screen"></div>;
 };
 
 // export the Globe component
