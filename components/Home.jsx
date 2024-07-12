@@ -7,6 +7,7 @@ import LoadingScreen from "../components/LoadingScreen";
 import LineAnimation from "../components/LineAnimation";
 import Globe from "./Globe";
 import Feedback from "./Feedback";
+import Footer from "./Footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -75,6 +76,8 @@ export default function Home() {
             <Globe />
           </div>
         </div>
+
+        <Footer />
 
         <div
           className="cursor"
