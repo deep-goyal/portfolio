@@ -18,7 +18,7 @@ const OSNCard = () => {
   };
 
   const handleMouseMove = (e) => {
-    setCursorPos({ top: e.clientY - 280, left: e.clientX + 10 });
+    setCursorPos({ top: e.clientY - 200, left: e.clientX + 10 });
   };
 
   return (
@@ -44,8 +44,8 @@ const OSNCard = () => {
           <Image
             src={OSNPreview}
             alt="Preview"
-            width={600}
-            height={600}
+            width={400}
+            height={400}
             layout="fixed"
             objectFit="cover"
           />

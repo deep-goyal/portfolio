@@ -18,7 +18,7 @@ const FECard = () => {
   };
 
   const handleMouseMove = (e) => {
-    setCursorPos({ top: e.clientY + 10, left: e.clientX + 10 });
+    setCursorPos({ top: e.clientY - 50, left: e.clientX + 10 });
   };
 
   return (
@@ -41,7 +41,7 @@ const FECard = () => {
           className="preview-box"
           style={{ top: cursorPos.top, left: cursorPos.left }}
         >
-          <Image src={FEPreview} alt="Preview" width={600} height={600} />
+          <Image src={FEPreview} alt="Preview" width={400} height={400} />
         </div>
       )}
     </>

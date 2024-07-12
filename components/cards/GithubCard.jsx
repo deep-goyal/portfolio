@@ -20,7 +20,7 @@ const GitHubCard = () => {
   };
 
   const handleMouseMove = (e) => {
-    setCursorPos({ top: e.clientY + 10, left: e.clientX + 10 });
+    setCursorPos({ top: e.clientY - 50, left: e.clientX + 10 });
   };
 
   return (
@@ -46,8 +46,8 @@ const GitHubCard = () => {
           <Image
             src={GithubPreview}
             alt="Preview"
-            width={600}
-            height={600}
+            width={400}
+            height={400}
             layout="fixed"
             objectFit="cover"
           />
