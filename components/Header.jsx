@@ -61,7 +61,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="flex flex-col items-start main-container header-container mt-40 pb-40">
+    <div className="flex flex-col items-start main-container header-container mt-40">
       <div className="flex flex-col gap-10 px-2xl">
         <p className="text-6xl ml-40 mt-40 font-bold goudy">{jumbledText}</p>
         <div className="flex ml-40">

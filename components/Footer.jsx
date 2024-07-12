@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="flex flex-col w-full pt-20 pl-40 pb-20 gap-20 items-start">
       <div className="flex gap-5">
         <p
-          className="text-4xl hover:text-gray-500"
+          className="text-4xl hover:text-gray-800"
           onMouseEnter={() => document.body.classList.add("no-cursor")}
           onMouseLeave={() => document.body.classList.remove("no-cursor")}
           onClick={() => {
@@ -19,7 +19,7 @@ const Footer = () => {
         </p>
 
         <p
-          className="text-4xl hover:text-gray-500"
+          className="text-4xl hover:text-gray-800"
           onMouseEnter={() => document.body.classList.add("no-cursor")}
           onMouseLeave={() => document.body.classList.remove("no-cursor")}
         >
@@ -27,7 +27,7 @@ const Footer = () => {
         </p>
 
         <p
-          className="text-4xl hover:text-gray-500"
+          className="text-4xl hover:text-gray-800"
           onMouseEnter={() => document.body.classList.add("no-cursor")}
           onMouseLeave={() => document.body.classList.remove("no-cursor")}
           onClick={() => {
