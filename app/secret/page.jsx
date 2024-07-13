@@ -10,6 +10,12 @@ const Page = () => {
   const [inputValue, setInputValue] = useState("");
   const [showSubmitButton, setShowSubmitButton] = useState(false);
 
+  const handleSubmit = () => {
+    if (inputValue === "admin") {
+      window.location.href = "/secret/restricted";
+    }
+  };
+
   //update the custom circular cursor
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -53,12 +59,18 @@ const Page = () => {
           onChange={handleChange}
           placeholder="enter the secret code"
           className="bg-[#121117] p-2 rounded-[4px] w-80 cursor-none text-sm focus:outline-none "
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSubmit();
+            }
+          }}
         />
         {showSubmitButton && (
           <div
             className="absolute right-0 top-0 bottom-0 w-10 flex items-center justify-center hover:text-xl hover:text-gray-500"
             onMouseEnter={() => document.body.classList.add("no-cursor")}
             onMouseLeave={() => document.body.classList.remove("no-cursor")}
+            onClick={handleSubmit}
           >
             <LuArrowUpRightFromCircle />
           </div>
