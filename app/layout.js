@@ -11,6 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="3x7ZX2rD0p4_fj3YwPRnbIoSm0MDsZzFuoIwfRkVj_Q"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911:wght@200;300;400;500;600;700;800&display=swap"
           rel="stylesheet"
