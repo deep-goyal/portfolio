@@ -4,7 +4,7 @@ import Deep from "@/public/nocurveblue.png";
 
 // !test1- using Deep Goyal in description to optimize google seo
 export const metadata = {
-  title: "Deep Goyal - Front-end Developer",
+  title: "Deep Goyal",
   description: "Deep Goyal",
 };
 
