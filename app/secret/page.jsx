@@ -13,6 +13,8 @@ const Page = () => {
   const handleSubmit = () => {
     if (inputValue === "admin") {
       window.location.href = "/secret/restricted";
+    } else if (inputValue === "password") {
+      window.location.href = "/secret/why-hire-me";
     }
   };
 
