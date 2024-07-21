@@ -2,10 +2,10 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Deep from "@/public/nocurveblue.png";
 
+// !test1- using Deep Goyal in description to optimize google seo
 export const metadata = {
   title: "Deep Goyal - Front-end Developer",
-  description:
-    "Explore the portfolio of Deep Goyal, a front-end developer with a passion for creating impactful and lasting user experiences.",
+  description: "Deep Goyal",
 };
 
 export default function RootLayout({ children }) {
