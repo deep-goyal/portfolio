@@ -66,9 +66,10 @@ export default function Header() {
         <p className="text-6xl ml-40 mt-40 font-bold goudy">{jumbledText}</p>
         <div className="flex ml-40">
           <p className="text-2xl max-w-lg font-normal goudy">
-            I'm a Full Stack Developer with a distinct passion in designing and
-            building frontend interfaces. I'm also a Junior and a Teaching
-            Assistant at Arizona State University.
+            I'm a Full Stack Developer with a strong passion for creating
+            stunning frontend interfaces. Currently, I am pursuing a Computer
+            Science degree at Arizona State University, where I also assist in
+            teaching foundational CS courses.
           </p>
         </div>
       </div>

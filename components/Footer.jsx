@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
 
       <p className="goudy text-[15px] pb-20">
-        DID YOU TRY MOVING THE CURSOR SUPER FAST?
+        DID YOU TRY MOVING THE CURSOR FASTER?
       </p>
 
       <p className="goudy text-[10px]">
