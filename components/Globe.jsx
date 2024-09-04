@@ -148,7 +148,7 @@ const Globe = () => {
   }, []);
 
   // return the globe element
-  return <div ref={globeEl} className="w-screen"></div>;
+  return <div ref={globeEl} className="w-screen overflow-hidden"></div>;
 };
 
 // export the Globe component

@@ -3,8 +3,8 @@ import "../styles/LoadingScreen.css";
 
 const LoadingScreen = ({ fadeOut }) => {
   return (
-    <div className={`stack ${fadeOut ? "fade-out" : ""}`}>
-      <div className="blobs">
+    <div className={`stack overflow-hidden ${fadeOut ? "fade-out" : ""}`}>
+      <div className="blobs overflow-hidden">
         <span className="blob"></span>
         <span className="blob"></span>
         <span className="blob"></span>

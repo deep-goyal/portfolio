@@ -66,7 +66,7 @@ export default function Home() {
   return (
     <div className="h-screen w-screen overflow-y-auto snap-y snap-mandatory">
       <div className="flex flex-col items-start flex-1">
-        <div className="relative w-full h-full snap-start pb-20">
+        <div className="relative w-full h-full snap-start overflow-hidden pb-20">
           <LineAnimation />
           <Header />
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
 
         <div className="flex justify-start align-start overflow-hidden w-screen snap-start">
           <Feedback />
-          <div>
+          <div className="overflow-hidden">
             <Globe />
           </div>
         </div>
