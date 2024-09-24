@@ -26,7 +26,7 @@ const page = () => {
       <div className="flex items-reverse justify-center pt-20 gap-20">
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
           <p className="text-4xl line-clamp-4 pb-5">Frontend Engineer</p>
-          <p>Jan 2023 - Dec 2023</p>
+          <p>Aug 2023 - Dec 2023</p>
           <p className="pb-5">ASU Automation Projects @SCAI-ASU</p>
           <p className="pb-2 underline">This Project is Special</p>
           <p className="pb-5">
@@ -43,7 +43,7 @@ const page = () => {
               with React and TailwindCSS.
             </li>
             <li>
-              i developed Postman scripts to test 10 of our rest api endpoints.
+              i developed Postman scripts to test 30 of our rest api endpoints.
             </li>
             <li>I taught my teammates HTML, CSS and JS. </li>
           </ul>

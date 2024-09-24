@@ -26,7 +26,7 @@ const page = () => {
         <div className="flex flex-grow pl-40 flex-col justify-start items-start">
           <p className="text-4xl line-clamp-6 pb-5">Software Engineer Intern</p>
           <p>Jun 2024 - Jul 2024</p>
-          <p className="pb-5">Infomaze Technologies, Mysore KA, India</p>
+          <p className="pb-5">Infomaze Technologies, Remote</p>
           <p className="pb-2 underline">My Work</p>
           <ul className="pb-5 list-disc list-inside">
             <li>
