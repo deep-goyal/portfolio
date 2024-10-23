@@ -24,7 +24,7 @@ const Footer = () => {
           onMouseLeave={() => document.body.classList.remove("no-cursor")}
           onClick={() => {
             window.open(
-              "https://drive.google.com/drive/folders/1nPwmSJ46BZWsARDnp3AnWryQZEGik-ZG?usp=share_link",
+              "https://drive.google.com/file/d/1KNGI64Odg3BxsXez4RAVRGIDoJdVW03l/view?usp=share_link",
               "_blank"
             );
           }}
