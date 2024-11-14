@@ -1,6 +1,0 @@
-.hoverdecor:hover {
-  background-image: url("../public/monacobg.jpg");
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
