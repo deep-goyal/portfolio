@@ -47,10 +47,15 @@ const LoadingScreen: React.FC = () => {
   return (
     <div className="preloader fixed inset-0 flex flex-col items-center justify-center bg-black text-white z-50">
       {!showImage && (
-        <div className="percentage font-bold text-[35vw] opacity-100">0</div>
+        <div className="percentage font-bold text-[25vw] opacity-100">0</div>
       )}
       {showImage && (
-        <Image src={Deep} alt="Deep" className="transition-opacity" />
+        <Image
+          src={Deep}
+          alt="Deep"
+          className="transition-opacity"
+          width={500}
+        />
       )}
     </div>
   );

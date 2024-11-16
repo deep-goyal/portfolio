@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      cursor: {
+        "blue-line": "url('/public/line.svg'), auto",
+        circle: "url('/public/circle.svg'), auto",
+      },
     },
   },
   plugins: [],
