@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.deepgoyal.com
-
-# Sitemaps
-Sitemap: https://www.deepgoyal.com/sitemap.xml
