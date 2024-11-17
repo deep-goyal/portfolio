@@ -1,49 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import Deep from "../images/deep.png";
 import Image from "next/image";
 import { RxArrowTopRight } from "react-icons/rx";
+import GifPreview from "./GifPreview";
 
 const Gallery = () => {
+  const [activeHover, setActiveHover] = useState(null);
+
+  const handleMouseEnter = (item: any) => setActiveHover(item);
+  const handleMouseLeave = () => setActiveHover(null);
+
   return (
     <div className="min-h-screen w-full flex flex-col items-left justify-start gap-40 pt-10">
       <Image src={Deep} alt="deep" width={150} className="self-center" />
-      <div className="flex px-40 gap-40">
+      <div className="flex pl-40 gap-40">
         <div className="flex flex-col text-white hover:cursor-none">
-          <div className="flex justify-between items-center p-5 rounded-full hover:bg-[#212124] hover:scale-105 transition-transform duration-300">
-            <p className="">Hack @UC Berkeley</p>
-            <p className="text-gray-500 pl-10">2024</p>
-          </div>
-
-          <div className="flex justify-between items-center p-5 rounded-full hover:bg-[#212124] hover:scale-105 transition-transform duration-300">
-            <p>Hack @Harvard University</p>
-            <p className="text-gray-500 pl-10">2024</p>
-          </div>
-
-          <div className="flex justify-between items-center p-5 rounded-full hover:bg-[#212124] hover:scale-105 transition-transform duration-300">
-            <p>Software Engineering Internship</p>
-            <p className="text-gray-500 pl-10">2023</p>
-          </div>
-
-          <div className="flex justify-between items-center p-5 rounded-full hover:bg-[#212124] hover:scale-105 transition-transform duration-300">
-            <p>Teaching Assistant @ASU</p>
-            <p className="text-gray-500 pl-10">2023</p>
-          </div>
-
-          <div className="flex justify-between items-center p-5 rounded-full hover:bg-[#212124] hover:scale-105 transition-transform duration-300">
-            <p>Sushi Scroll</p>
-            <p className="text-gray-500 pl-10">2023</p>
-          </div>
-
-          <div className="flex justify-between items-center p-5 rounded-full hover:bg-[#212124] hover:scale-105 transition-transform duration-300">
-            <p>Attendance System for ASU</p>
-            <p className="text-gray-500 pl-10">2022</p>
-          </div>
+          {[
+            { id: 1, text: "Hack @UC Berkeley", year: "2024" },
+            { id: 2, text: "Hack @Harvard University", year: "2024" },
+            { id: 3, text: "Software Engineering Internship", year: "2023" },
+            { id: 4, text: "Teaching Assistant @ASU", year: "2023" },
+            { id: 5, text: "Sushi Scroll", year: "2023" },
+            { id: 6, text: "Attendance System for ASU", year: "2022" },
+          ].map((item) => (
+            <div
+              key={item.id}
+              className="flex justify-between items-center p-5 rounded-full hover:bg-[#212124] hover:scale-105 transition-transform duration-300"
+              onMouseEnter={() => handleMouseEnter(item.id)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <p>{item.text}</p>
+              <p className="text-gray-500 pl-10">{item.year}</p>
+            </div>
+          ))}
         </div>
-        <div className="self-center text-2xl">
-          <p className="hover:cursor-blue-line">Hi, I'm Deep!</p>
-          <div className="flex align-start gap-1 justify-start hover:cursor-blue-line">
+
+        {/* Right Side Content */}
+        <div
+          className={`self-center cursor-blue-line text-2xl transition-opacity duration-300 ${
+            activeHover ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          <p>Hi, I'm Deep Goyal!</p>
+          <div className="flex align-start gap-[9px] justify-start hover:cursor-blue-line">
             <p>Citizen of </p>
-            <div className="flex items-center text-blue-300 cursor-none hover:text-blue-600">
+            <div
+              className="flex items-center text-blue-300 cursor-none hover:text-blue-600"
+              onClick={() => {
+                window.open(
+                  "https://en.wikipedia.org/wiki/Terra#:~:text=An%20alternate%20name%20for%20planet,Latin%20name%20for%20the%20planet"
+                );
+              }}
+            >
               <p>Terra</p>
               <RxArrowTopRight className="hover:scale-x-110 hover:scale-y-110" />
             </div>
@@ -81,6 +89,9 @@ const Gallery = () => {
             </div>
           </div>
         </div>
+
+        {/* GifPreview Component */}
+        <GifPreview isHovered={!!activeHover} />
       </div>
     </div>
   );
