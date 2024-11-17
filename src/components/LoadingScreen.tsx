@@ -45,7 +45,7 @@ const LoadingScreen: React.FC = () => {
   }, []);
 
   return (
-    <div className="preloader fixed inset-0 flex flex-col items-center justify-center bg-black text-white z-50">
+    <div className="preloader fixed inset-0 flex flex-col items-center justify-center bg-[#0a0a0a] text-white z-50">
       {!showImage && (
         <div className="percentage font-bold text-[25vw] opacity-100">0</div>
       )}
