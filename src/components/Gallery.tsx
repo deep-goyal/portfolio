@@ -1,42 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Deep from "../images/deep.png";
 import Image from "next/image";
 import { RxArrowTopRight } from "react-icons/rx";
 import GifPreview from "./GifPreview";
 
 const Gallery = () => {
-  const [activeHover, setActiveHover] = useState<number | null>(null); // Ensure activeHover can be null or a number
-
-  const handleMouseEnter = (item: number) => setActiveHover(item);
-  const handleMouseLeave = () => setActiveHover(null);
+  const [activeHover, setActiveHover] = useState<number | null>(null);
 
   const mediaMap: Record<number, string> = {
     1: "/verbalist.mp4", // Media for "Hack @UC Berkeley"
     2: "/harvard.mp4", // Media for "Hack @Harvard University"
-    3: "/taaward.png", // Media for "Software Engineering Internship"
+    3: "/blank.png", // Media for "Software Engineering Internship"
     4: "/taaward.png", // Media for "Teaching Assistant @ASU"
-    5: "/taaward.png", // Media for "Sushi Scroll"
-    6: "/taaward.png", // Media for "Attendance System for ASU"
+    5: "/sushiscroll.mp4", // Media for "Sushi Scroll"
+    6: "/devilsinvent.png", // Media for "Attendance System for ASU"
   };
+
+  const galleryItems = [
+    { id: 1, text: "Hack @UC Berkeley", year: "2024" },
+    { id: 2, text: "Hack @Harvard University", year: "2024" },
+    { id: 5, text: "Sushi Scroll", year: "2023" },
+    { id: 3, text: "Software Engineering Internship", year: "2023" },
+    { id: 4, text: "Teaching Assistant @ASU", year: "2023" },
+    { id: 6, text: "Attendance System for ASU", year: "2022" },
+  ];
 
   return (
     <div className="min-h-screen w-full flex flex-col items-left justify-start gap-40 pt-10">
       <Image src={Deep} alt="deep" width={150} className="self-center" />
       <div className="flex pl-40 gap-40">
         <div className="flex flex-col text-white hover:cursor-none">
-          {[
-            { id: 1, text: "Hack @UC Berkeley", year: "2024" },
-            { id: 2, text: "Hack @Harvard University", year: "2024" },
-            { id: 3, text: "Software Engineering Internship", year: "2023" },
-            { id: 4, text: "Teaching Assistant @ASU", year: "2023" },
-            { id: 5, text: "Sushi Scroll", year: "2023" },
-            { id: 6, text: "Attendance System for ASU", year: "2022" },
-          ].map((item) => (
+          {galleryItems.map((item) => (
             <div
               key={item.id}
-              className="flex justify-between items-center p-5 rounded-full hover:bg-[#212124] hover:scale-105 transition-transform duration-300"
-              onMouseEnter={() => handleMouseEnter(item.id)}
-              onMouseLeave={handleMouseLeave}
+              className={`flex justify-between items-center p-5 rounded-full transition-transform duration-300 ${
+                activeHover === item.id
+                  ? "bg-[#212124] scale-105"
+                  : "hover:bg-[#212124] hover:scale-105"
+              }`}
+              onMouseEnter={() => setActiveHover(item.id)}
+              onMouseLeave={() => setActiveHover(null)}
             >
               <p>{item.text}</p>
               <p className="text-gray-500 pl-10">{item.year}</p>
@@ -66,7 +69,12 @@ const Gallery = () => {
             </div>
           </div>
           <div className="flex pt-3 text-lg cursor-none">
-            <div className="flex items-center hover:text-gray-600 pr-3 cursor-none">
+            <div
+              className="flex items-center hover:text-gray-600 pr-3 cursor-none"
+              onClick={() => {
+                window.open("https://read.cv/deepindots");
+              }}
+            >
               <p>About</p>
               <RxArrowTopRight className="hover:scale-x-110 hover:scale-y-110" />
             </div>
