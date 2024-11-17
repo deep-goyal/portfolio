@@ -100,7 +100,12 @@ const Gallery = () => {
               <RxArrowTopRight className="hover:scale-x-110 hover:scale-y-110" />
             </div>
 
-            <div className="flex items-center hover:text-gray-600 cursor-none ">
+            <div
+              className="flex items-center hover:text-gray-600 cursor-none "
+              onClick={() => {
+                window.open("/resume-goyal-deep.pdf");
+              }}
+            >
               <p>Resume</p>
               <RxArrowTopRight className="hover:scale-x-110 hover:scale-y-110" />
             </div>
