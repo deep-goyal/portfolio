@@ -1,0 +1,69 @@
+WEBVTT
+
+00:00.400 --> 00:07.040
+verbalist is a vs code extension that enables 
+users to edit documents using natural language  
+
+00:07.040 --> 00:14.000
+uh hands free so this extension is powered 
+by Groq's speech to text API that uses Open  
+
+00:14.000 --> 00:23.520
+AI's Whisper AI models and Groq's super fast 
+hardware to convert speech to text and these  
+
+00:23.520 --> 00:30.040
+text commands are fed to Llama over Groq's 
+Hardware to get the VS Code commands these VS  
+
+00:30.040 --> 00:35.680
+code commands are important because we bind them 
+to keyboard bindings to edit the actual document  
+
+00:35.680 --> 00:42.240
+automatically so let me just demonstrate how 
+we can use these AI models so let's just say  
+
+00:42.240 --> 00:46.200
+I want to delete the line 15 so I'm going to 
+ask the model so I bounded the extension to  
+
+00:46.200 --> 00:55.600
+command shift Z so I'll ask it now so uh Delete 
+line 15 so it's going to make an API request,  
+
+00:55.600 --> 01:01.440
+convert the speech to text and feed it to Llama 
+and that's what it did and you can see the line  
+
+01:01.440 --> 01:08.720
+was deleted. I'm going to Cmd Shift Z to make sure 
+we have the original document. For fun let's also  
+
+01:08.720 --> 01:12.960
+insert something so let's just say we want to 
+insert hello let's just insert hello at the  
+
+01:12.960 --> 01:21.560
+current cursor, so I'm going to ask the extension 
+again so command shift Z "insert hello" so it did  
+
+01:21.560 --> 01:26.760
+that and hello has been inserted so as you can 
+see there are various use cases to edit document  
+
+01:26.760 --> 01:34.840
+just by the simple uh shortcut. Now for fun we're 
+going to replace all the words with cookie so uh  
+
+01:34.840 --> 01:42.480
+let's just do it. Replace all words with cookies! 
+We did that and as you can see, it's very fast.  
+
+01:42.480 --> 01:48.440
+It converts all the speech to text with Groq's 
+super fast hardware and uses the APIs to send  
+
+01:48.440 --> 01:55.960
+request to Llama and get the VS Code bindings 
+and edit the document instantly! Thank you

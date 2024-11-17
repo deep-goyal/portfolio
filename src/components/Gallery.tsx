@@ -5,10 +5,19 @@ import { RxArrowTopRight } from "react-icons/rx";
 import GifPreview from "./GifPreview";
 
 const Gallery = () => {
-  const [activeHover, setActiveHover] = useState(null);
+  const [activeHover, setActiveHover] = useState<number | null>(null); // Ensure activeHover can be null or a number
 
-  const handleMouseEnter = (item: any) => setActiveHover(item);
+  const handleMouseEnter = (item: number) => setActiveHover(item);
   const handleMouseLeave = () => setActiveHover(null);
+
+  const mediaMap: Record<number, string> = {
+    1: "/verbalist.mp4", // Media for "Hack @UC Berkeley"
+    2: "/harvard.mp4", // Media for "Hack @Harvard University"
+    3: "/taaward.png", // Media for "Software Engineering Internship"
+    4: "/taaward.png", // Media for "Teaching Assistant @ASU"
+    5: "/taaward.png", // Media for "Sushi Scroll"
+    6: "/taaward.png", // Media for "Attendance System for ASU"
+  };
 
   return (
     <div className="min-h-screen w-full flex flex-col items-left justify-start gap-40 pt-10">
@@ -91,7 +100,10 @@ const Gallery = () => {
         </div>
 
         {/* GifPreview Component */}
-        <GifPreview isHovered={!!activeHover} />
+        <GifPreview
+          isHovered={!!activeHover}
+          media={activeHover ? mediaMap[activeHover] : null}
+        />
       </div>
     </div>
   );
