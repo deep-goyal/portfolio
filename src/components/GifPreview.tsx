@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 interface GifPreviewProps {
@@ -65,7 +66,7 @@ const GifPreview = ({ isHovered, media }: GifPreviewProps) => {
           )}
         </video>
       ) : (
-        <img
+        <Image
           src={cachedMedia}
           alt="media preview"
           className="object-contain w-full"

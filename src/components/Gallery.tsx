@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Deep from "../images/deep.png";
 import Image from "next/image";
 import { RxArrowTopRight } from "react-icons/rx";
@@ -53,7 +53,7 @@ const Gallery = () => {
             activeHover ? "opacity-0" : "opacity-100"
           }`}
         >
-          <p>Hi, I'm Deep Goyal!</p>
+          <p>Hi, I am Deep Goyal!</p>
           <div className="flex align-start gap-[9px] justify-start hover:cursor-blue-line">
             <p>Citizen of </p>
             <div
