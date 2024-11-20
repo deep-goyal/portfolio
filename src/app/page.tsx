@@ -2,7 +2,7 @@
 
 import LoadingScreen from "../components/LoadingScreen";
 // import Gallery from "@/components/Gallery";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Deep from "../images/deep.png";
 import Image from "next/image";
 import { RxArrowTopRight } from "react-icons/rx";
@@ -19,6 +19,25 @@ const Home = () => {
     5: "/sushiscroll.mp4", // Media for "Sushi Scroll"
     6: "/devilsinvent.png", // Media for "Attendance System for ASU"
   };
+
+  useEffect(() => {
+    const preloadMedia = async () => {
+      for (const media of Object.values(mediaMap)) {
+        try {
+          const response = await fetch(media, {
+            cache: "force-cache", // Cache the media for optimal performance
+          });
+          if (!response.ok) {
+            console.error(`Failed to preload media: ${media}`);
+          }
+        } catch (error) {
+          console.error("Error preloading media:", error);
+        }
+      }
+    };
+
+    preloadMedia();
+  }, []);
 
   const galleryItems = [
     { id: 1, text: "Hack @UC Berkeley", year: "2024" },
