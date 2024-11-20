@@ -70,6 +70,8 @@ const GifPreview = ({ isHovered, media }: GifPreviewProps) => {
           src={cachedMedia}
           alt="media preview"
           className="object-contain w-full"
+          width={150}
+          height={400}
         />
       )}
     </div>
