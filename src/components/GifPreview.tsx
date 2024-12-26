@@ -9,9 +9,9 @@ interface GifPreviewProps {
 const GifPreview = ({ isHovered, media }: GifPreviewProps) => {
   const [cachedMedia, setCachedMedia] = useState<string | null>(null);
 
-  // Map for subtitles
+  // map media to subtitles
   const subtitleMap: Record<string, string> = {
-    "/verbalist.mp4": "/verbalist-sub.vtt", // Add more subtitles here if needed
+    "/verbalist.mp4": "/verbalist-sub.vtt",
   };
 
   useEffect(() => {
@@ -35,8 +35,8 @@ const GifPreview = ({ isHovered, media }: GifPreviewProps) => {
   if (!cachedMedia || !isHovered) {
     return null; // Do not render if media is not ready or not hovered
   }
-  const isVideo = media ? media.endsWith(".mp4") : false; // Check if media is a video
-  const subtitles = media ? subtitleMap[media] : undefined; // Check if there's a subtitle file
+  const isVideo = media ? media.endsWith(".mp4") : false; // video switcher
+  const subtitles = media ? subtitleMap[media] : undefined; // use subtitles if found
 
   return (
     <div
@@ -72,6 +72,7 @@ const GifPreview = ({ isHovered, media }: GifPreviewProps) => {
           className="object-contain w-full"
           width={150}
           height={400}
+          priority={true}
         />
       )}
     </div>

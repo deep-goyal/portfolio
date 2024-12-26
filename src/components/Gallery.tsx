@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Deep from "../images/deep.png";
 import Image from "next/image";
 import { RxArrowTopRight } from "react-icons/rx";
@@ -8,12 +8,12 @@ const Gallery = () => {
   const [activeHover, setActiveHover] = useState<number | null>(null);
 
   const mediaMap: Record<number, string> = {
-    1: "/verbalist.mp4", // Media for "Hack @UC Berkeley"
-    2: "/harvard.mp4", // Media for "Hack @Harvard University"
-    3: "/blank.png", // Media for "Software Engineering Internship"
-    4: "/taaward.png", // Media for "Teaching Assistant @ASU"
-    5: "/sushiscroll.mp4", // Media for "Sushi Scroll"
-    6: "/devilsinvent.png", // Media for "Attendance System for ASU"
+    1: "/verbalist.mp4", 
+    2: "/harvard.mp4", 
+    3: "/blank.png",
+    4: "/taaward.png", 
+    5: "/sushiscroll.mp4",
+    6: "/devilsinvent.png", 
   };
 
   const galleryItems = [
@@ -24,6 +24,25 @@ const Gallery = () => {
     { id: 4, text: "Teaching Assistant @ASU", year: "2023" },
     { id: 6, text: "Attendance System for ASU", year: "2022" },
   ];
+
+  useEffect(() => {
+    const preloadMedia = async () => {
+      for (const media of Object.values(mediaMap)) {
+        try {
+          const response = await fetch(media, {
+            cache: "force-cache", // force cache the media for quick loads
+          });
+          if (!response.ok) {
+            console.error(`Failed to preload media: ${media}`);
+          }
+        } catch (error) {
+          console.error("Error preloading media:", error);
+        }
+      }
+    };
+
+    preloadMedia();
+  }, []);
 
   return (
     <div className="min-h-screen w-full flex flex-col items-left justify-start gap-40 pt-10">
