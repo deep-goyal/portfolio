@@ -10,10 +10,10 @@ const Gallery = () => {
   const mediaMap: Record<number, string> = {
     1: "/verbalist.mp4", 
     2: "/harvard.mp4", 
-    3: "/blank.png",
-    4: "/taaward.png", 
+    3: "/blank.mp4",
+    4: "/ta.mp4", 
     5: "/sushiscroll.mp4",
-    6: "/devilsinvent.png", 
+    6: "/devilsinvent.mp4", 
   };
 
   const galleryItems = [

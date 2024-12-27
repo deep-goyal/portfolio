@@ -35,7 +35,6 @@ const GifPreview = ({ isHovered, media }: GifPreviewProps) => {
   if (!cachedMedia || !isHovered) {
     return null; // Do not render if media is not ready or not hovered
   }
-  const isVideo = media ? media.endsWith(".mp4") : false; // video switcher
   const subtitles = media ? subtitleMap[media] : undefined; // use subtitles if found
 
   return (
@@ -47,34 +46,23 @@ const GifPreview = ({ isHovered, media }: GifPreviewProps) => {
       }`}
       style={{ width: "70vw", maxWidth: "50vw" }}
     >
-      {isVideo ? (
-        <video
-          src={cachedMedia}
-          className="rounded-lg shadow-lg w-full"
-          autoPlay
-          muted
-          loop
-        >
-          {subtitles && (
-            <track
-              src={subtitles}
-              kind="subtitles"
-              srcLang="en"
-              label="English"
-              default
-            />
-          )}
-        </video>
-      ) : (
-        <Image
-          src={cachedMedia}
-          alt="media preview"
-          className="object-contain w-full"
-          width={150}
-          height={400}
-          priority={true}
-        />
-      )}
+      <video
+        src={cachedMedia}
+        className="rounded-lg shadow-lg w-full"
+        autoPlay
+        muted
+        loop
+      >
+        {subtitles && (
+          <track
+            src={subtitles}
+            kind="subtitles"
+            srcLang="en"
+            label="English"
+            default
+          />
+        )}
+      </video>
     </div>
   );
 };
