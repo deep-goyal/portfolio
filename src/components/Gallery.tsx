@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Deep from "../images/deep.png";
 import Image from "next/image";
 import { RxArrowTopRight } from "react-icons/rx";
@@ -7,14 +7,14 @@ import GifPreview from "./GifPreview";
 const Gallery = () => {
   const [activeHover, setActiveHover] = useState<number | null>(null);
 
-  const mediaMap: Record<number, string> = {
+  const mediaMap: Record<number, string> = useMemo(() => ({
     1: "/verbalist.mp4", 
     2: "/harvard.mp4", 
     3: "/blank.mp4",
     4: "/ta.mp4", 
     5: "/sushiscroll.mp4",
     6: "/devilsinvent.mp4", 
-  };
+  }), []);
 
   const galleryItems = [
     { id: 1, text: "Hack @UC Berkeley", year: "2024" },
@@ -42,7 +42,7 @@ const Gallery = () => {
     };
 
     preloadMedia();
-  }, []);
+  }, [mediaMap]);
 
   return (
     <div className="min-h-screen w-full flex flex-col items-left justify-start gap-40 pt-10">
