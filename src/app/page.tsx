@@ -8,9 +8,10 @@ const Home = () => {
   return (
     <>
       <LoadingScreen />
-
+      
       <div className="content flex flex-col items-center justify-center min-h-screen text-gray-300">
         <Gallery />
+        
       </div>
     </>
   );
