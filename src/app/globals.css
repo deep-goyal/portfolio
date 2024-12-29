@@ -23,9 +23,9 @@ body {
 
 @layer utilities {
   .cursor-blue-line {
-    cursor: url("../../public/line.svg"), auto;
+    cursor: url("../../public/line.svg") 1 12, auto;
   }
   .cursor-circle {
-    cursor: url("../../public/circle.svg"), auto;
+    cursor: url("../../public/circle.svg") 20 20, auto;
   }
 }

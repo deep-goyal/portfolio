@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Image from "next/image";
-import Deep from "../images/deep.png";
+import Deep from "../../public/deep.png";
 
 const LoadingScreen: React.FC = () => {
   const [showImage, setShowImage] = useState(false);
@@ -47,14 +47,14 @@ const LoadingScreen: React.FC = () => {
   return (
     <div className="preloader fixed inset-0 flex flex-col items-center justify-center bg-[#0a0a0a] text-white z-50">
       {!showImage && (
-        <div className="percentage font-bold text-[25vw] opacity-100">0</div>
+        <div className="percentage font-bold text-[20vw] opacity-100">0</div>
       )}
       {showImage && (
         <Image
           src={Deep}
           alt="Deep"
           className="transition-opacity"
-          width={500}
+          width={400}
         />
       )}
     </div>
