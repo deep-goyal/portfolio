@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Image from "next/image";
-import Deep from "../../public/deep.png";
+import Deep from "../images/deep.png";
 
 const LoadingScreen: React.FC = () => {
   const [showImage, setShowImage] = useState(false);
