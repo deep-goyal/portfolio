@@ -1,8 +1,6 @@
 "use client";
 
-import LoadingScreen from "../components/LoadingScreen";
 import React, { useState, useEffect, useMemo } from "react";
-import Letter from "@/components/Letter";
 import Deep from "../../public/deep.png";
 import Image from "next/image";
 import { RxArrowTopRight } from "react-icons/rx";
@@ -37,7 +35,7 @@ const Home = () => {
       for (const media of Object.values(mediaMap)) {
         try {
           const response = await fetch(media, {
-            cache: "force-cache", // force cache the media for quick loads
+            cache: "force-cache",
           });
           if (!response.ok) {
             console.error(`Failed to preload media: ${media}`);
@@ -53,9 +51,6 @@ const Home = () => {
 
   return (
     <div>
-      <LoadingScreen />
-
-      {/*gallery component*/}
       <div className="flex flex-col items-center justify-center text-gray-300">
         <div className="min-h-screen w-full flex flex-col items-left justify-start gap-40 pt-10">
           <Image src={Deep} alt="deep" width={150} className="self-center" />
@@ -78,7 +73,6 @@ const Home = () => {
               ))}
             </div>
 
-            {/* right side content */}
             <div
               className={`self-center cursor-blue-line text-2xl transition-opacity duration-300 ${
                 activeHover ? "opacity-0" : "opacity-100"
@@ -86,18 +80,7 @@ const Home = () => {
             >
               <p>Hi, I am Deep Goyal!</p>
               <div className="flex align-start text-md text-gray-500 gap-[9px] justify-start cursor-blue-line">
-                <p>Citizen of </p>
-                <div
-                  className="flex items-center text-blue-300 cursor-none hover:text-blue-600"
-                  onClick={() => {
-                    window.open(
-                      "https://en.wikipedia.org/wiki/Terra#:~:text=An%20alternate%20name%20for%20planet,Latin%20name%20for%20the%20planet"
-                    );
-                  }}
-                >
-                  <p>Terra</p>
-                  <RxArrowTopRight className="hover:scale-x-110 hover:scale-y-110" />
-                </div>
+                <p>Software Engineer</p>
               </div>
               <div className="flex pt-3 text-lg cursor-none">
                 <div
@@ -143,7 +126,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* video player component */}
             <GifPreview
               isHovered={!!activeHover}
               media={activeHover ? mediaMap[activeHover] : null}
@@ -151,8 +133,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <Letter />
     </div>
   );
 };
